@@ -1,0 +1,163 @@
+.our-work {
+    background-color:$color-grey-lt1;
+    padding: 14rem 3rem 20rem 3rem;
+    grid-column: full-start / full-end;
+    text-align:center;
+    display: grid;
+
+
+    &__text-box {
+        margin-bottom: 6rem;
+        max-width: 100rem;
+        justify-self: center;
+    }
+
+    
+}
+
+.vid-gallery {
+    margin-bottom: 6rem;
+    display:grid;
+    grid-template-areas:    "vid1 vid1 vid1 vid2 vid2 vid2"
+                            "vid3 vid3 vid4 vid4 vid5 vid5";
+    grid-gap: 3rem;
+
+    .video {
+        height: 18vw;
+        background-size: cover;
+        background-position: center;
+        position:relative;
+        transition: all .3s;
+
+        &:hover {   
+            transform:translateY(-3px);
+            box-shadow: 0 .5rem 1rem rgba($color-black, 0.3);
+           
+            
+        }
+    }
+
+    .v1{
+        grid-area: vid1;
+        height: 25vw;
+        background-image: linear-gradient(rgba($color-black,.5),rgba($color-black,.5)),url(../img/wedding_ryan-emily.jpg);
+        
+        &:hover{
+            background-image: linear-gradient(rgba($color-black,.1),rgba($color-black,.1)),url(../img/wedding_ryan-emily.jpg);
+            
+        }
+    }
+
+    .v2{
+        grid-area: vid2;
+        height: 25vw;
+        background-image: linear-gradient(rgba($color-black,.5),rgba($color-black,.5)),url(../img/dentist_cedar-pearl.jpg);
+
+        &:hover{
+            background-image: linear-gradient(rgba($color-black,.1),rgba($color-black,.1)),url(../img/dentist_cedar-pearl.jpg);
+            
+        }
+    }
+
+    .v3{
+        grid-area: vid3;
+        background-image: linear-gradient(rgba($color-black,.5),rgba($color-black,.5)),url(../img/lagoon-bc.jpg);
+
+        &:hover{
+            background-image: linear-gradient(rgba($color-black,.1),rgba($color-black,.1)),url(../img/lagoon-bc.jpg);
+            
+        }
+    }
+
+    .v4{
+        grid-area: vid4;
+        background-image: linear-gradient(rgba($color-black,.5),rgba($color-black,.5)),url(../img/vid-montgomery.jpg);
+
+        &:hover{
+            background-image: linear-gradient(rgba($color-black,.1),rgba($color-black,.1)),url(../img/vid-montgomery.jpg);
+            
+        }
+    }
+
+    .v5{
+        grid-area: vid5;
+        background-image: linear-gradient(rgba($color-black,.5),rgba($color-black,.5)),url(../img/realestate-maribeth.jpg);
+
+        &:hover{
+            background-image: linear-gradient(rgba($color-black,.1),rgba($color-black,.1)),url(../img/realestate-maribeth.jpg);
+            
+        }
+    }
+
+}
+
+.fas {
+    height: 13rem;
+    width: 15rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+
+.fa-play {
+    background-image: url(../img/play-btn.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-device-width: 990px){
+    .fas {
+        height: 10rem;
+        width: 10rem;
+        
+    }
+}
+
+@media only screen and (max-device-width: 770px){
+    .our-work{
+        padding: 12rem 3rem 17rem 3rem;
+    }
+}
+
+@media only screen and (max-device-width: 710px){
+    .vid-gallery{
+        grid-template-areas:    "vid1 vid1"
+                                "vid2 vid3"
+                                "vid4 vid5";
+
+
+       margin-bottom:4rem;
+    }
+    .vid-gallery {
+        .video {
+            height: 25vh;
+        }
+    }
+}
+
+@media only screen and (max-device-width: 480px){
+    
+    .our-work {
+        &__text-box{
+            margin-bottom: 5rem;
+        }
+    }
+
+    .vid-gallery{
+        grid-template-areas:    "vid1"
+                                "vid2"
+                                "vid3"
+                                "vid4"
+                                "vid5";
+        
+        grid-gap: 1rem;
+        margin-bottom: 4rem;
+
+        .video {
+            height: 16rem;
+        }
+
+    }
+   
+}

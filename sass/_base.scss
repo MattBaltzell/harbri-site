@@ -1,0 +1,133 @@
+// Colors
+
+$color-primary: #63B99A;
+$color-primary-lt: #7ac4a9;
+$color-primary-dk: #4dad8a;
+$color-secondary: #207181;
+$color-secondary-lt: #2a95aa;
+$color-secondary-dk: #164d58;
+
+$color-grey-lt1: #efefef;
+$color-grey-lt2: #cccccc;
+$color-grey-md: #777;
+$color-grey-dk1: #333;
+$color-grey-dk2: #111;
+
+$color-white: #fff;
+$color-black: #000;
+
+
+
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /*This defines what 1rem is*/ 
+    font-size: 62.5%;
+    max-width: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    
+}
+
+section {
+    clip-path: polygon(0 10rem, 100% 0, 100% 100%, 0 100%);
+}
+
+
+
+
+
+
+
+.container {
+    display:grid;
+    grid-template-rows:95vh repeat(4,min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    position:relative;
+}
+
+.footer{
+    background-color:$color-primary;
+    background: linear-gradient(to right, $color-primary, $color-secondary);
+    grid-column: full-start / full-end;
+    padding: 8rem 3rem 4rem 3rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    &__info {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 120rem;
+        margin-bottom: 2rem;
+
+        &--copy {
+            font-size: 1.8rem;
+        }
+    }
+
+    .social{
+        display:flex;
+        justify-content: center;
+        margin-bottom: 5rem;
+        
+        &--icons{
+            height: 5rem;
+            width: 5rem;
+            margin: 1rem;
+            transition: transform 0.2s;
+        
+            &:hover {
+                transform: translateY(-3px);
+                border-radius: 50%;
+                box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+            }
+            &:active{
+                transform: translateY(-1px);
+                border-radius: 50%;
+                box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+                
+            }
+
+        }
+        
+        
+    }
+
+    &__logo{
+        height: 13rem;
+        width: 13rem;
+        margin-right: 3rem;
+    }
+
+
+}
+
+@media only screen and (max-device-width: 640px){
+    .footer{
+        padding: 5rem 3rem 2rem 3rem;
+        &__info{
+            flex-direction: column;
+        }
+        &__logo{
+            height: 12rem;
+            width: 12rem;
+            margin: 0 0 3rem 0;
+        }
+        .social{
+            margin-bottom: 2rem;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.testimonials {
+    margin-top: -14rem;
+    background-color: #333;
+    grid-column: full-start / full-end;
+    text-align:center;
+    display: grid;
+  
+    &__text-box {
+        padding-top: 16rem;
+        max-width: 100rem;
+        justify-self: center;
+    }
+
+}
+
+@media only screen and (max-device-width: 480px){
+    .testimonials{
+        margin-top: -14rem;
+        
+
+        &__text-box {
+            padding-top: 14rem;
+        }
+    }
+}
