@@ -447,12 +447,13 @@ MEDIA QUERIES
 
 .navigation__nav {
   height: 100vh;
-  width: 0;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1500;
+  width: 0;
   opacity: 0;
+  transform: translateX(-100rem);
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -495,6 +496,7 @@ MEDIA QUERIES
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
   width: 100%;
+  transform: translateX(0);
 }
 
 .navigation__icon {
