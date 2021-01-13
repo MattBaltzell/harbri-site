@@ -367,7 +367,7 @@ MEDIA QUERIES
   height: 62rem;
 }
 
-.card__side {
+/*.card__side {
   height: 62rem;
   transition: all .8s ease;
   position: absolute;
@@ -378,6 +378,26 @@ MEDIA QUERIES
   border-radius: 3px;
   overflow: hidden;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+*/
+
+.card__side {
+  height: 62rem;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-perspective: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  visibility: visible;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 
 .card__side--front {
@@ -796,7 +816,8 @@ MEDIA QUERIES
 .vid-gallery {
   margin-bottom: 6rem;
   display: grid;
-  grid-template-areas: "vid1 vid1 vid1 vid2 vid2 vid2" "vid3 vid3 vid4 vid4 vid5 vid5";
+  grid-template-areas: "vid1 vid1 vid1 vid2 vid2 vid2"
+ "vid3 vid3 vid4 vid4 vid5 vid5";
   grid-gap: 3rem;
 }
 
@@ -890,7 +911,9 @@ MEDIA QUERIES
 
 @media only screen and (max-device-width: 710px) {
   .vid-gallery {
-    grid-template-areas: "vid1 vid1" "vid2 vid3" "vid4 vid5";
+    grid-template-areas: "vid1 vid1"
+ "vid2 vid3"
+ "vid4 vid5";
     margin-bottom: 4rem;
   }
   .vid-gallery .video {
@@ -903,7 +926,11 @@ MEDIA QUERIES
     margin-bottom: 5rem;
   }
   .vid-gallery {
-    grid-template-areas: "vid1" "vid2" "vid3" "vid4" "vid5";
+    grid-template-areas: "vid1"
+ "vid2"
+ "vid3"
+ "vid4"
+ "vid5";
     grid-gap: 1rem;
     margin-bottom: 4rem;
   }
