@@ -534,7 +534,7 @@ MEDIA QUERIES
     left: 0;
     transform: translate(0);
     width: 100%;
-    padding: 7rem 4rem 4rem 4rem;
+    padding: 5rem 4rem 4rem 4rem;
   }
   .card__price-box {
     margin-bottom: 3rem;
@@ -543,7 +543,7 @@ MEDIA QUERIES
     text-align: center;
   }
   .card__price-value {
-    font-size: 4rem;
+    font-size: 6rem;
   }
 }
 
@@ -584,7 +584,6 @@ MEDIA QUERIES
 
 .home-header {
   background: linear-gradient(to right bottom, rgba(99, 185, 154, 0.9), rgba(32, 113, 129, 0.9)), url(../img/hero.jpg);
-  background-image: linear-gradient(to right bottom, rgba(99, 185, 154, 0.9), rgba(32, 113, 129, 0.9)), url(../img/hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -592,7 +591,6 @@ MEDIA QUERIES
 
 .wedding-header {
   background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/wedding-1.jpg);
-  background-image: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/wedding-1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
