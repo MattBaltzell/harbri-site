@@ -80,48 +80,49 @@
     }
 
     &__personal-promo{
-        background-image: linear-gradient(rgba($color-black,.6),rgba($color-black,.6)),url(../img/personal-promo-1.jpg);
+        background-image: linear-gradient(rgba($color-black,.6),rgba($color-black,.6)),url(../img/personal-promo-2.jpg);
         background-size:cover;
         background-position: center;
 
         &:hover{
-            background-image: linear-gradient(rgba($color-black,.1),rgba($color-black,.1)),url(../img/personal-promo-1.jpg);
+            background-image: linear-gradient(rgba($color-black,.1),rgba($color-black,.1)),url(../img/personal-promo-2.jpg);
         }
     }
     
     &__music-vid{
-        background-image: linear-gradient(rgba($color-black,.6),rgba($color-black,.6)),url(../img/hero.jpg);
+        background-image: linear-gradient(rgba($color-black,.6),rgba($color-black,.6)),url(../img/music-video-1.png);
         background-size:cover;
 
         &:hover{
-            background-image: linear-gradient(rgba($color-black,.1),rgba($color-black,.1)),url(../img/hero.jpg);
+            background-image: linear-gradient(rgba($color-black,.1),rgba($color-black,.1)),url(../img/music-video-1.png);
         }
     }
 
     &__aerial{
-        background-image: linear-gradient(rgba($color-black,.6),rgba($color-black,.6)),url(../img/hero.jpg);
+        background-image: linear-gradient(rgba($color-black,.6),rgba($color-black,.6)),url(../img/aerial-photo-1.jpg);
         background-size:cover;
+        background-position:center;
 
         &:hover{
-            background-image: linear-gradient(rgba($color-black,.1),rgba($color-black,.1)),url(../img/hero.jpg);
+            background-image: linear-gradient(rgba($color-black,.1),rgba($color-black,.1)),url(../img/aerial-photo-1.jpg);
         }
     }
 
     &__events{
-        background-image: linear-gradient(rgba($color-black,.6),rgba($color-black,.6)),url(../img/hero.jpg);
+        background-image: linear-gradient(rgba($color-black,.6),rgba($color-black,.6)),url(../img/events-1.png);
         background-size:cover;
 
         &:hover{
-            background-image: linear-gradient(rgba($color-black,.1),rgba($color-black,.1)),url(../img/hero.jpg);
+            background-image: linear-gradient(rgba($color-black,.1),rgba($color-black,.1)),url(../img/events-1.png);
         }
     }
 
     &__editing{
-        background-image: linear-gradient(rgba($color-black,.6),rgba($color-black,.6)), url(../img/hero.jpg);
+        background-image: linear-gradient(rgba($color-black,.6),rgba($color-black,.6)), url(../img/editing-1.png);
         background-size:cover;
 
         &:hover{
-            background-image: linear-gradient(rgba($color-black,.1),rgba($color-black,.1)),url(../img/hero.jpg);
+            background-image: linear-gradient(rgba($color-black,.1),rgba($color-black,.1)),url(../img/editing-1.png);
         }
     }
     

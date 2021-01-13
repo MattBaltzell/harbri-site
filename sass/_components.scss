@@ -1,7 +1,8 @@
 .btn {
     &,
     &:link,
-    &:visited {
+    &:visited,
+     {
         font-size: 1.4rem;
         text-transform: uppercase;
         text-decoration: none;
@@ -13,6 +14,7 @@
         justify-self: center;
         color: $color-white;
         background-color: $color-primary;
+        cursor: pointer;
         //background: linear-gradient(to right bottom, $color-primary, $color-secondary);
     }
 
@@ -20,6 +22,7 @@
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
         background-color: $color-primary-dk;
+        
     }
     &:active{
         transform: translateY(-1px);
@@ -30,6 +33,8 @@
     &--white {
 
       &,
+      &:link,
+      &:visited,
       &:hover{
         background-color: $color-white;
         background: $color-white;
@@ -39,7 +44,16 @@
       &:hover {
         color: $color-primary;
       }
-        
+    
+      
+    & a {
+      text-decoration:none;
+      color: $color-grey-md;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
     }
 
 }

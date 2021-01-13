@@ -1,7 +1,6 @@
 .header {
-    background-image: linear-gradient(to right bottom, rgba($color-primary, .9), rgba($color-secondary, .9)), url(../img/hero.jpg); 
-    background-size: cover;
-    background-position: bottom; 
+     
+    background-size: cover; 
     background-attachment: fixed;
     clip-path: polygon(0 0rem, 100% 0, 100% 90%, 0 100%);
     display:grid;
@@ -37,6 +36,23 @@
         margin: 3rem 0 10rem 0;
     }
 
+}
+
+.home-header {
+    background: linear-gradient(to right bottom, rgba($color-primary, .9), rgba($color-secondary, .9)), url(../img/hero.jpg);
+    background-image: linear-gradient(to right bottom, rgba($color-primary, .9), rgba($color-secondary, .9)), url(../img/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+}
+
+.wedding-header {
+    background: linear-gradient(to right bottom, rgba($color-secondary-lt, .9), rgba($color-secondary-dk, .9)), url(../img/wedding-1.jpg);
+    background-image: linear-gradient(to right bottom, rgba($color-secondary-lt, .9), rgba($color-secondary-dk, .9)), url(../img/wedding-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
 @media only screen and (max-device-width: 1024px){
