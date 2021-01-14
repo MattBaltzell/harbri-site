@@ -82,6 +82,24 @@
             url(../img/wedding_ryan-emily.jpg);
             background-position: center;
         }
+
+        &--real-estate1 {
+            background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk), 
+            url(../img/wedding_ryan-emily.jpg);
+            background-position: center;
+        }
+
+        &--real-estate2 {
+            background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk), 
+            url(../img/wedding_ryan-emily.jpg);
+            background-position: center;
+        }
+
+        &--real-estate3 {
+            background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk), 
+            url(../img/wedding_ryan-emily.jpg);
+            background-position: center;
+        }
     }
 
     &__heading {

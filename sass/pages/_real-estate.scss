@@ -1,4 +1,4 @@
-.vid-gallery-wedding {
+.vid-gallery-real-estate {
     grid-template-areas:    "vid1 vid2 vid3";
     
     .video{
@@ -38,14 +38,14 @@
 
 @media only screen and (max-device-width: 710px){
     
-    .vid-gallery-wedding{
+    .vid-gallery-real-estate{
         grid-template-areas:    "vid1 vid1"
                                 "vid2 vid3"
                                 "vid4 vid5";
        margin-bottom:4rem;
     }
     
-    .vid-gallery-wedding {
+    .vid-gallery-real-estate {
         .video {
             height: 25vh;
         }
@@ -60,7 +60,7 @@
         }
     }
 
-    .vid-gallery-wedding{
+    .vid-gallery-real-estate{
         grid-template-areas:    "vid1"
                                 "vid2"
                                 "vid3"
