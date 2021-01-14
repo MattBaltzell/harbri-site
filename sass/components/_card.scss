@@ -4,11 +4,12 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 62rem;
+    height: 59rem;
+    
     
     &__side {
-        height: 62rem;
-        transition: all .8s ease;
+        height: 59rem;
+        transition: all .8s ease; 
         position: absolute;
         top: 0;
         left: 0;
@@ -178,6 +179,8 @@
         border-radius: 3px;
         background-color: $color-white;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        margin-bottom: 2rem;
+        
         
         &__side {
             height: auto;

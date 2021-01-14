@@ -13,6 +13,7 @@
     padding:  3rem;
     position:relative;
     
+    
     &__logo {
         position: absolute;
         top:3.5rem;
@@ -47,7 +48,14 @@
 }
 
 .wedding-header {
-    background: linear-gradient(to right bottom, rgba($color-secondary-lt, .9), rgba($color-secondary-dk, .9)), url(../img/wedding-1.jpg);
+    background: linear-gradient(to right bottom, rgba($color-secondary-lt, .9), rgba($color-secondary-dk, .9)), url(../img/wedding-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.real-estate-header {
+    background: linear-gradient(to right bottom, rgba($color-secondary-lt, .9), rgba($color-secondary-dk, .9)), url(../img/real-estate-hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -83,6 +91,8 @@
 
 @media only screen and (max-device-width: 480px){
     .header{
+        padding-bottom: 10rem;
+
         &__logo {
             position: absolute;
             top:2.1rem;

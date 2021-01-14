@@ -55,7 +55,7 @@ section {
 
 .container {
   display: grid;
-  grid-template-rows: 95vh repeat(4, min-content);
+  grid-template-rows: 100vh repeat(4, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   position: relative;
 }
@@ -130,6 +130,24 @@ section {
   }
 }
 
+@media only screen and (max-device-width: 375px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media only screen and (max-device-width: 360px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media only screen and (max-device-width: 330px) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -173,7 +191,12 @@ body {
 }
 
 q {
-  color: #cccccc;
+  color: #dddddd;
+}
+
+.not-offered {
+  color: #dddddd;
+  text-decoration: line-through;
 }
 
 .telephone {
@@ -364,11 +387,11 @@ MEDIA QUERIES
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 62rem;
+  height: 59rem;
 }
 
 .card__side {
-  height: 62rem;
+  height: 59rem;
   transition: all .8s ease;
   position: absolute;
   top: 0;
@@ -482,7 +505,7 @@ MEDIA QUERIES
 }
 
 .card__details ul li:not(:last-child) {
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #dddddd;
 }
 
 .card__cta {
@@ -516,6 +539,7 @@ MEDIA QUERIES
     border-radius: 3px;
     background-color: #fff;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    margin-bottom: 2rem;
   }
   .card__side {
     height: auto;
@@ -594,7 +618,14 @@ MEDIA QUERIES
 }
 
 .wedding-header {
-  background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/wedding-1.jpg);
+  background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/wedding-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.real-estate-header {
+  background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/real-estate-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -617,6 +648,9 @@ MEDIA QUERIES
 }
 
 @media only screen and (max-device-width: 480px) {
+  .header {
+    padding-bottom: 10rem;
+  }
   .header__logo {
     position: absolute;
     top: 2.1rem;
@@ -1152,5 +1186,64 @@ MEDIA QUERIES
   }
   .testimonials__text-box {
     padding-top: 14rem;
+  }
+}
+
+.vid-gallery-wedding {
+  grid-template-areas: "vid1 vid2 vid3";
+}
+
+.vid-gallery-wedding .video {
+  height: 18vw;
+}
+
+.vid-gallery-wedding .v1 {
+  grid-area: vid1;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+}
+
+.vid-gallery-wedding .v1:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+}
+
+.vid-gallery-wedding .v2 {
+  grid-area: vid2;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+}
+
+.vid-gallery-wedding .v2:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+}
+
+.vid-gallery-wedding .v3 {
+  grid-area: vid3;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+}
+
+.vid-gallery-wedding .v3:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+}
+
+@media only screen and (max-device-width: 710px) {
+  .vid-gallery-wedding {
+    grid-template-areas: "vid1 vid1" "vid2 vid3" "vid4 vid5";
+    margin-bottom: 4rem;
+  }
+  .vid-gallery-wedding .video {
+    height: 25vh;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  .our-work__text-box {
+    margin-bottom: 5rem;
+  }
+  .vid-gallery-wedding {
+    grid-template-areas: "vid1" "vid2" "vid3" "vid4" "vid5";
+    grid-gap: 1rem;
+    margin-bottom: 4rem;
+  }
+  .vid-gallery-wedding .video {
+    height: 16rem;
   }
 }

@@ -44,6 +44,11 @@ q {
     color: $color-grey-lt2;
 }
 
+.not-offered {
+    color: $color-grey-lt2;
+    text-decoration: line-through;
+}
+
 .telephone {
     font-size: 3.5rem;
     font-weight: 300;

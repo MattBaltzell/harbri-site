@@ -11,7 +11,8 @@ $color-tertiary-lt: #f7c381;//b8eb97
 $color-tertiary-dk:#f3a541; //92df5f
 
 $color-grey-lt1: #efefef;
-$color-grey-lt2: #cccccc;
+$color-grey-lt2: #dddddd;
+$color-grey-lt3: #cccccc;
 $color-grey-md: #777;
 $color-grey-dk1: #333;
 $color-grey-dk2: #111;
@@ -54,7 +55,7 @@ section {
 
 .container {
     display:grid;
-    grid-template-rows:95vh repeat(4,min-content);
+    grid-template-rows:100vh repeat(4,min-content);
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     position:relative;
 }
@@ -132,5 +133,24 @@ section {
         .social{
             margin-bottom: 2rem;
         }
+    }
+}
+
+
+@media only screen and (max-device-width: 375px){
+    html{
+        font-size: 60%;
+    }
+}
+
+@media only screen and (max-device-width: 360px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media only screen and (max-device-width: 330px){
+    html{
+        font-size: 50%;
     }
 }
