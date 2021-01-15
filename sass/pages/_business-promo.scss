@@ -1,4 +1,4 @@
-.vid-gallery-real-estate {
+.vid-gallery-business-promo {
     grid-template-areas:    "vid1 vid2 vid3";
     
     .video{
@@ -34,15 +34,17 @@
 }
 
 
+
+
 @media only screen and (max-device-width: 710px){
     
-    .vid-gallery-real-estate {
+    .vid-gallery-business-promo{
         grid-template-areas:    "vid1 vid1"
                                 "vid2 vid3"
                                 "vid4 vid5";
         margin-bottom:4rem;
 
-        .video {
+       .video {
             height: 25vh;
         }
 
@@ -57,7 +59,7 @@
         }
     }
 
-    .vid-gallery-real-estate{
+    .vid-gallery-business-promo{
         grid-template-areas:    "vid1"
                                 "vid2"
                                 "vid3"
@@ -71,5 +73,4 @@
         }
 
     }
-   
 }

@@ -47,6 +47,7 @@ q {
 .not-offered {
     color: $color-grey-lt2;
     text-decoration: line-through;
+    letter-spacing: -1px;
 }
 
 .telephone {

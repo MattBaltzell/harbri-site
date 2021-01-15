@@ -197,6 +197,7 @@ q {
 .not-offered {
   color: #dddddd;
   text-decoration: line-through;
+  letter-spacing: -1px;
 }
 
 .telephone {
@@ -442,36 +443,31 @@ MEDIA QUERIES
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+  background-position: center;
 }
 
 .card__picture--wedding1 {
   background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/wedding_ryan-emily.jpg);
-  background-position: center;
 }
 
 .card__picture--wedding2 {
   background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/wedding_ryan-emily.jpg);
-  background-position: center;
 }
 
 .card__picture--wedding3 {
   background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/wedding_ryan-emily.jpg);
-  background-position: center;
 }
 
 .card__picture--real-estate1 {
   background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/wedding_ryan-emily.jpg);
-  background-position: center;
 }
 
 .card__picture--real-estate2 {
   background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/wedding_ryan-emily.jpg);
-  background-position: center;
 }
 
 .card__picture--real-estate3 {
   background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/wedding_ryan-emily.jpg);
-  background-position: center;
 }
 
 .card__heading {
@@ -1019,7 +1015,6 @@ MEDIA QUERIES
   }
   .packages__cards {
     display: flex;
-    flex-direction: column;
     row-gap: 3rem;
   }
   .packages__list-box {
@@ -1201,6 +1196,65 @@ MEDIA QUERIES
   }
   .testimonials__text-box {
     padding-top: 14rem;
+  }
+}
+
+.vid-gallery-business-promo {
+  grid-template-areas: "vid1 vid2 vid3";
+}
+
+.vid-gallery-business-promo .video {
+  height: 18vw;
+}
+
+.vid-gallery-business-promo .v1 {
+  grid-area: vid1;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+}
+
+.vid-gallery-business-promo .v1:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+}
+
+.vid-gallery-business-promo .v2 {
+  grid-area: vid2;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+}
+
+.vid-gallery-business-promo .v2:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+}
+
+.vid-gallery-business-promo .v3 {
+  grid-area: vid3;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+}
+
+.vid-gallery-business-promo .v3:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+}
+
+@media only screen and (max-device-width: 710px) {
+  .vid-gallery-business-promo {
+    grid-template-areas: "vid1 vid1" "vid2 vid3" "vid4 vid5";
+    margin-bottom: 4rem;
+  }
+  .vid-gallery-business-promo .video {
+    height: 25vh;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  .our-work__text-box {
+    margin-bottom: 5rem;
+  }
+  .vid-gallery-business-promo {
+    grid-template-areas: "vid1" "vid2" "vid3" "vid4" "vid5";
+    grid-gap: 1rem;
+    margin-bottom: 4rem;
+  }
+  .vid-gallery-business-promo .video {
+    height: 16rem;
   }
 }
 

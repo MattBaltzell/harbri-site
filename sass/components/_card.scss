@@ -19,7 +19,6 @@
         -webkit-transform: translate3d(0,0,0);
         visibility:visible;
         backface-visibility: hidden;
-
         border-radius: 3px;
         overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
@@ -64,41 +63,36 @@
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
+        background-position: center;
         
         &--wedding1 {
             background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk), 
             url(../img/wedding_ryan-emily.jpg);
-            background-position: center;
         }
 
         &--wedding2 {
             background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk), 
             url(../img/wedding_ryan-emily.jpg);
-            background-position: center;
         }
 
         &--wedding3 {
             background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk), 
             url(../img/wedding_ryan-emily.jpg);
-            background-position: center;
         }
 
         &--real-estate1 {
             background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk), 
             url(../img/wedding_ryan-emily.jpg);
-            background-position: center;
         }
 
         &--real-estate2 {
             background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk), 
             url(../img/wedding_ryan-emily.jpg);
-            background-position: center;
         }
 
         &--real-estate3 {
             background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk), 
             url(../img/wedding_ryan-emily.jpg);
-            background-position: center;
         }
     }
 
