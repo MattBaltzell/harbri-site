@@ -55,16 +55,28 @@
             padding: 0 3rem;
         }
 
-        &__cards {
-            display:flex;
-            // flex-direction: column;
-            row-gap: 3rem;
+        // &__cards {
+        //     display:flex;
+        //     flex-direction: column;
+        //     row-gap: 3rem;
             
-        }
+        // }
 
         &__list-box {
             margin-top: 4rem;
     
         }
+    }
+}
+
+@media only screen and (max-device-width: 770px){
+    .packages{ 
+        
+        &__cards {
+            display:flex;
+            flex-direction: column;
+            row-gap: 3rem;
+        }
+   
     }
 }
