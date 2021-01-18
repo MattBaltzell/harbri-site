@@ -1020,6 +1020,7 @@ MEDIA QUERIES
 
 @media only screen and (max-device-width: 770px) {
   .packages__cards {
+    grid-column: full-start / full-end;
     display: flex;
     flex-direction: column;
     row-gap: 3rem;

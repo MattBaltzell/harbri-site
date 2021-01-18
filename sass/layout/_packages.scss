@@ -55,12 +55,6 @@
             padding: 0 3rem;
         }
 
-        // &__cards {
-        //     display:flex;
-        //     flex-direction: column;
-        //     row-gap: 3rem;
-            
-        // }
 
         &__list-box {
             margin-top: 4rem;
@@ -73,6 +67,7 @@
     .packages{ 
         
         &__cards {
+            grid-column: full-start / full-end;
             display:flex;
             flex-direction: column;
             row-gap: 3rem;
