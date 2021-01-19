@@ -391,6 +391,10 @@ MEDIA QUERIES
   height: 59rem;
 }
 
+.card-bp {
+  height: 61rem;
+}
+
 .card__side {
   height: 59rem;
   transition: all .8s ease;
@@ -406,6 +410,10 @@ MEDIA QUERIES
   border-radius: 3px;
   overflow: hidden;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.card__side-bp {
+  height: 61rem;
 }
 
 .card__side--front {
@@ -446,28 +454,100 @@ MEDIA QUERIES
   background-position: center;
 }
 
-.card__picture--wedding1 {
-  background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/wedding_ryan-emily.jpg);
+.card__picture--aerial-photography1 {
+  background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/aerial-photography-2.jpg);
 }
 
-.card__picture--wedding2 {
-  background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/wedding_ryan-emily.jpg);
+.card__picture--aerial-photography2 {
+  background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/aerial-photography-3.jpg);
 }
 
-.card__picture--wedding3 {
-  background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/wedding_ryan-emily.jpg);
+.card__picture--aerial-photography3 {
+  background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/aerial-photography-4.jpg);
+}
+
+.card__picture--business-promo1 {
+  background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/business-promo-2.jpg);
+}
+
+.card__picture--business-promo2 {
+  background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/business-promo-3.jpg);
+}
+
+.card__picture--business-promo3 {
+  background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/business-promo-4.jpg);
+}
+
+.card__picture--editing1 {
+  background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/editing-2.jpg);
+}
+
+.card__picture--editing2 {
+  background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/editing-3.jpg);
+}
+
+.card__picture--editing3 {
+  background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/editing-4.jpg);
+}
+
+.card__picture--events1 {
+  background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/events-2.jpg);
+}
+
+.card__picture--events2 {
+  background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/events-3.jpg);
+}
+
+.card__picture--events3 {
+  background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/events-4.jpg);
+}
+
+.card__picture--music-videos1 {
+  background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/music-videos-2.jpg);
+}
+
+.card__picture--music-videos2 {
+  background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/music-videos-3.jpg);
+}
+
+.card__picture--music-videos3 {
+  background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/music-videos-4.jpg);
+}
+
+.card__picture--personal-promo1 {
+  background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/personal-promo-2.jpg);
+}
+
+.card__picture--personal-promo2 {
+  background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/personal-promo-3.jpg);
+}
+
+.card__picture--personal-promo3 {
+  background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/personal-promo-4.jpg);
 }
 
 .card__picture--real-estate1 {
-  background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/wedding_ryan-emily.jpg);
+  background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/real-estate-2.jpg);
 }
 
 .card__picture--real-estate2 {
-  background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/wedding_ryan-emily.jpg);
+  background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/real-estate-3.jpg);
 }
 
 .card__picture--real-estate3 {
-  background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/wedding_ryan-emily.jpg);
+  background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/real-estate-4.jpg);
+}
+
+.card__picture--wedding1 {
+  background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/wedding-2.jpg);
+}
+
+.card__picture--wedding2 {
+  background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/wedding-3.jpg);
+}
+
+.card__picture--wedding3 {
+  background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/wedding-4.jpg);
 }
 
 .card__heading {
@@ -628,8 +708,43 @@ MEDIA QUERIES
   background-position: bottom;
 }
 
-.wedding-header {
-  background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/wedding-hero.jpg);
+.aerial-photography-header {
+  background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/aerial-photography-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.business-promo-header {
+  background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/business-promo-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.editing-header {
+  background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/editing-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.events-header {
+  background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/events-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.music-videos-header {
+  background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/music-videos-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.personal-promo-header {
+  background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/personal-promo-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -637,6 +752,13 @@ MEDIA QUERIES
 
 .real-estate-header {
   background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/real-estate-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.wedding-header {
+  background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/wedding-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -1027,7 +1149,7 @@ MEDIA QUERIES
   }
 }
 
-.services {
+.services, .contact {
   margin: -4rem 0;
   padding: 10rem 0 14rem 0;
   grid-column: center-start / center-end;
@@ -1035,23 +1157,23 @@ MEDIA QUERIES
   display: grid;
 }
 
-.services__text-box {
+.services__text-box, .contact__text-box {
   margin-bottom: 6rem;
   max-width: 100rem;
   justify-self: center;
 }
 
-.services__container {
+.services__container, .contact__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
   grid-gap: 2rem;
 }
 
-.services__container a {
+.services__container a, .contact__container a {
   text-decoration: none;
 }
 
-.services__container--block {
+.services__container--block, .contact__container--block {
   height: 20rem;
   display: grid;
   align-items: center;
@@ -1059,88 +1181,88 @@ MEDIA QUERIES
   transition: all .3s;
 }
 
-.services__container--block .logo-badge {
+.services__container--block .logo-badge, .contact__container--block .logo-badge {
   height: 85%;
   opacity: .3;
 }
 
-.services__container--block:hover:not(:nth-child(5)) {
+.services__container--block:hover:not(:nth-child(5)), .contact__container--block:hover:not(:nth-child(5)) {
   transform: translateY(-3px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
 
-.services__weddings {
+.services__weddings, .contact__weddings {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/wedding-1.jpg);
   background-size: cover;
   transition: all .2s;
 }
 
-.services__weddings:hover {
+.services__weddings:hover, .contact__weddings:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding-1.jpg);
 }
 
-.services__real-estate {
+.services__real-estate, .contact__real-estate {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/real-estate-1.jpg);
   background-size: cover;
 }
 
-.services__real-estate:hover {
+.services__real-estate:hover, .contact__real-estate:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/real-estate-1.jpg);
 }
 
-.services__biz-promo {
+.services__biz-promo, .contact__biz-promo {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/business-promo-1.jpg);
   background-size: cover;
 }
 
-.services__biz-promo:hover {
+.services__biz-promo:hover, .contact__biz-promo:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/business-promo-1.jpg);
 }
 
-.services__personal-promo {
+.services__personal-promo, .contact__personal-promo {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/personal-promo-2.jpg);
   background-size: cover;
   background-position: center;
 }
 
-.services__personal-promo:hover {
+.services__personal-promo:hover, .contact__personal-promo:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/personal-promo-2.jpg);
 }
 
-.services__music-vid {
+.services__music-vid, .contact__music-vid {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/music-video-1.png);
   background-size: cover;
 }
 
-.services__music-vid:hover {
+.services__music-vid:hover, .contact__music-vid:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/music-video-1.png);
 }
 
-.services__aerial {
+.services__aerial, .contact__aerial {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/aerial-photo-1.jpg);
   background-size: cover;
   background-position: center;
 }
 
-.services__aerial:hover {
+.services__aerial:hover, .contact__aerial:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/aerial-photo-1.jpg);
 }
 
-.services__events {
+.services__events, .contact__events {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/events-1.png);
   background-size: cover;
 }
 
-.services__events:hover {
+.services__events:hover, .contact__events:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/events-1.png);
 }
 
-.services__editing {
+.services__editing, .contact__editing {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/editing-1.png);
   background-size: cover;
 }
 
-.services__editing:hover {
+.services__editing:hover, .contact__editing:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/editing-1.png);
 }
 
@@ -1323,11 +1445,11 @@ MEDIA QUERIES
 }
 
 .vid-gallery-wedding {
-  grid-template-areas: "vid1 vid2 vid3";
+  grid-template-columns: 1fr, 1fr;
 }
 
 .vid-gallery-wedding .video {
-  height: 18vw;
+  height: 22vw;
 }
 
 .vid-gallery-wedding .v1 {
@@ -1341,27 +1463,14 @@ MEDIA QUERIES
 
 .vid-gallery-wedding .v2 {
   grid-area: vid2;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_thompson.jpg);
 }
 
 .vid-gallery-wedding .v2:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
-}
-
-.vid-gallery-wedding .v3 {
-  grid-area: vid3;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
-}
-
-.vid-gallery-wedding .v3:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_thompson.jpg);
 }
 
 @media only screen and (max-device-width: 710px) {
-  .vid-gallery-wedding {
-    grid-template-areas: "vid1 vid1" "vid2 vid3" "vid4 vid5";
-    margin-bottom: 4rem;
-  }
   .vid-gallery-wedding .video {
     height: 25vh;
   }
@@ -1372,7 +1481,6 @@ MEDIA QUERIES
     margin-bottom: 5rem;
   }
   .vid-gallery-wedding {
-    grid-template-areas: "vid1" "vid2" "vid3" "vid4" "vid5";
     grid-gap: 1rem;
     margin-bottom: 4rem;
   }

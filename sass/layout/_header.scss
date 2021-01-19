@@ -47,8 +47,43 @@
 
 }
 
-.wedding-header {
-    background: linear-gradient(to right bottom, rgba($color-secondary-lt, .9), rgba($color-secondary-dk, .9)), url(../img/wedding-hero.jpg);
+.aerial-photography-header {
+    background: linear-gradient(to right bottom, rgba($color-secondary-lt, .9), rgba($color-secondary-dk, .9)), url(../img/aerial-photography-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.business-promo-header {
+    background: linear-gradient(to right bottom, rgba($color-secondary-lt, .9), rgba($color-secondary-dk, .9)), url(../img/business-promo-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.editing-header {
+    background: linear-gradient(to right bottom, rgba($color-secondary-lt, .9), rgba($color-secondary-dk, .9)), url(../img/editing-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.events-header {
+    background: linear-gradient(to right bottom, rgba($color-secondary-lt, .9), rgba($color-secondary-dk, .9)), url(../img/events-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.music-videos-header {
+    background: linear-gradient(to right bottom, rgba($color-secondary-lt, .9), rgba($color-secondary-dk, .9)), url(../img/music-videos-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.personal-promo-header {
+    background: linear-gradient(to right bottom, rgba($color-secondary-lt, .9), rgba($color-secondary-dk, .9)), url(../img/personal-promo-hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -60,6 +95,14 @@
     background-repeat: no-repeat;
     background-position: top;
 }
+
+.wedding-header {
+    background: linear-gradient(to right bottom, rgba($color-secondary-lt, .9), rgba($color-secondary-dk, .9)), url(../img/wedding-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
 
 @media only screen and (max-device-width: 1024px){
     .header{

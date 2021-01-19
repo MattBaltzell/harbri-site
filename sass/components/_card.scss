@@ -5,6 +5,10 @@
     -moz-perspective: 150rem;
     position: relative;
     height: 59rem;
+
+    &-bp{
+        height: 61rem;
+    }
     
     
     &__side {
@@ -22,6 +26,10 @@
         border-radius: 3px;
         overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &-bp{
+            height: 61rem;
+        }
 
         &--front {
             background-color: $color-white;
@@ -65,35 +73,127 @@
         border-top-right-radius: 3px;
         background-position: center;
         
-        &--wedding1 {
+        &--aerial-photography1 {
             background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk), 
-            url(../img/wedding_ryan-emily.jpg);
+            url(../img/aerial-photography-2.jpg);
         }
 
-        &--wedding2 {
+        &--aerial-photography2 {
             background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk), 
-            url(../img/wedding_ryan-emily.jpg);
+            url(../img/aerial-photography-3.jpg);
         }
 
-        &--wedding3 {
+        &--aerial-photography3 {
             background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk), 
-            url(../img/wedding_ryan-emily.jpg);
+            url(../img/aerial-photography-4.jpg);
+        }
+
+        &--business-promo1 {
+            background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk), 
+            url(../img/business-promo-2.jpg);
+        }
+
+        &--business-promo2 {
+            background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk), 
+            url(../img/business-promo-3.jpg);
+        }
+
+        &--business-promo3 {
+            background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk), 
+            url(../img/business-promo-4.jpg);
+        }
+
+        &--editing1 {
+            background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk), 
+            url(../img/editing-2.jpg);
+        }
+
+        &--editing2 {
+            background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk), 
+            url(../img/editing-3.jpg);
+        }
+
+        &--editing3 {
+            background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk), 
+            url(../img/editing-4.jpg);
+        }
+
+        &--events1 {
+            background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk), 
+            url(../img/events-2.jpg);
+        }
+
+        &--events2 {
+            background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk), 
+            url(../img/events-3.jpg);
+        }
+
+        &--events3 {
+            background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk), 
+            url(../img/events-4.jpg);
+        }
+
+        &--music-videos1 {
+            background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk), 
+            url(../img/music-videos-2.jpg);
+        }
+
+        &--music-videos2 {
+            background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk), 
+            url(../img/music-videos-3.jpg);
+        }
+
+        &--music-videos3 {
+            background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk), 
+            url(../img/music-videos-4.jpg);
+        }
+
+        &--personal-promo1 {
+            background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk), 
+            url(../img/personal-promo-2.jpg);
+        }
+
+        &--personal-promo2 {
+            background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk), 
+            url(../img/personal-promo-3.jpg);
+        }
+
+        &--personal-promo3 {
+            background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk), 
+            url(../img/personal-promo-4.jpg);
         }
 
         &--real-estate1 {
             background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk), 
-            url(../img/wedding_ryan-emily.jpg);
+            url(../img/real-estate-2.jpg);
         }
 
         &--real-estate2 {
             background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk), 
-            url(../img/wedding_ryan-emily.jpg);
+            url(../img/real-estate-3.jpg);
         }
 
         &--real-estate3 {
             background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk), 
-            url(../img/wedding_ryan-emily.jpg);
+            url(../img/real-estate-4.jpg);
         }
+
+        &--wedding1 {
+            background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk), 
+            url(../img/wedding-2.jpg);
+        }
+
+        &--wedding2 {
+            background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk), 
+            url(../img/wedding-3.jpg);
+        }
+
+        &--wedding3 {
+            background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk), 
+            url(../img/wedding-4.jpg);
+        }
+
+
     }
 
     &__heading {
