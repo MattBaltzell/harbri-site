@@ -58,70 +58,6 @@
 
 }
 
-.main-gallery {
-    background: #333;
-    position: relative;
-
-  }
-  
-  .gallery-cell {
-    width: 100%;
-    position:absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .testimonial {
-    text-align: center;
-    max-width: 850px;
-    margin: 3.5rem; 
-    margin-bottom: 10rem;
-    padding: 0 2rem;
-
-    &-avatar {
-        width: 10rem;
-        border-radius: 50%;
-    }
-
-    &-quote {
-        font-family: "Lato", sans-serif;
-        display: block;
-        font-size: 24px;
-        font-weight: 300;
-        padding: 20px 0;
-    }
-
-    &-author {
-        font-family: "Lato", sans-serif;
-        display: block;
-        font-weight: 800;
-        color: $color-primary;
-      }
-
-  }
- 
-  /* position dots in carousel */
-.flickity-page-dots {
-    bottom: 3rem;
-  }
-  /* white circles */
-  .flickity-page-dots .dot {
-    width: 1rem;
-    height: 1rem;
-    opacity: 1;
-    background: transparent;
-    border: 2px solid $color-primary;
-  }
-  /* fill-in selected dot */
-  .flickity-page-dots .dot.is-selected {
-    background: $color-primary;
-  }
-  
-
-@media only screen and (min-device-width: 800px){
-  .testimonial {margin: 3.5rem auto 10rem auto;}
-}
-
 @media only screen and (max-device-width: 710px){
   .btn {
     &,
@@ -131,5 +67,3 @@
     }
   }
 }
-
-//margin: 3.5rem auto 10rem auto;

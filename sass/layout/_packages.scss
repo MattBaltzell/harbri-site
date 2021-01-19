@@ -70,6 +70,7 @@
             grid-column: full-start / full-end;
             display:flex;
             flex-direction: column;
+            justify-self: stretch;
             row-gap: 3rem;
         }
    
