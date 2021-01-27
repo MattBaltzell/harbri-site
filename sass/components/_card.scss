@@ -1,343 +1,476 @@
 .card {
+  // FUNCTIONALITY
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 58rem;
 
-    // FUNCTIONALITY
-    perspective: 150rem;
-    -moz-perspective: 150rem;
-    position: relative;
-    height: 59rem;
+  &-bp {
+    height: 62.5rem;
+  }
 
-    &-bp{
-        height: 61rem;
+  &-ev {
+    height: 48.5rem;
+  }
+
+  &-mv {
+    height: 48.5rem;
+  }
+
+  &-pp {
+    height: 53.5rem;
+  }
+
+  &-re {
+    height: 53.5rem;
+  }
+
+  &__side {
+    height: 58rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-perspective: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    visibility: visible;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &-bp {
+      height: 62.5rem;
     }
-    
-    
+
+    &-ev {
+      height: 48.5rem;
+    }
+
+    &-mv {
+      height: 48.5rem;
+    }
+
+    &-pp {
+      height: 53.5rem;
+    }
+
+    &-re {
+      height: 53.5rem;
+    }
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-lt,
+          $color-primary-dk
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-lt,
+          $color-tertiary-dk
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-lt,
+          $color-secondary-dk
+        );
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  // FRONT SIDE STYLING
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-position: center;
+
+    &--aerial-photography1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-lt,
+          $color-primary-dk
+        ),
+        url(../img/aerial-photography-2.jpg);
+    }
+
+    &--aerial-photography2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-lt,
+          $color-tertiary-dk
+        ),
+        url(../img/aerial-photography-3.jpg);
+    }
+
+    &--aerial-photography3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-lt,
+          $color-secondary-dk
+        ),
+        url(../img/aerial-photography-4.jpg);
+    }
+
+    &--business-promo1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-lt,
+          $color-primary-dk
+        ),
+        url(../img/business-promo-2.png);
+    }
+
+    &--business-promo2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-lt,
+          $color-tertiary-dk
+        ),
+        url(../img/business-promo-3.png);
+    }
+
+    &--business-promo3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-lt,
+          $color-secondary-dk
+        ),
+        url(../img/business-promo-4.png);
+    }
+
+    &--editing1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-lt,
+          $color-primary-dk
+        ),
+        url(../img/editing-2.png);
+    }
+
+    &--editing2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-lt,
+          $color-tertiary-dk
+        ),
+        url(../img/editing-3.png);
+    }
+
+    &--editing3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-lt,
+          $color-secondary-dk
+        ),
+        url(../img/editing-4.png);
+    }
+
+    &--events1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-lt,
+          $color-primary-dk
+        ),
+        url(../img/events-2.png);
+    }
+
+    &--events2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-lt,
+          $color-tertiary-dk
+        ),
+        url(../img/events-3.png);
+    }
+
+    &--events3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-lt,
+          $color-secondary-dk
+        ),
+        url(../img/events-4.png);
+    }
+
+    &--music-videos1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-lt,
+          $color-primary-dk
+        ),
+        url(../img/music-videos-2.png);
+    }
+
+    &--music-videos2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-lt,
+          $color-tertiary-dk
+        ),
+        url(../img/music-videos-3.png);
+    }
+
+    &--music-videos3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-lt,
+          $color-secondary-dk
+        ),
+        url(../img/music-videos-4.png);
+    }
+
+    &--personal-promo1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-lt,
+          $color-primary-dk
+        ),
+        url(../img/personal-promo-2.jpg);
+    }
+
+    &--personal-promo2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-lt,
+          $color-tertiary-dk
+        ),
+        url(../img/personal-promo-3.jpg);
+    }
+
+    &--personal-promo3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-lt,
+          $color-secondary-dk
+        ),
+        url(../img/personal-promo-4.jpg);
+    }
+
+    &--real-estate1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-lt,
+          $color-primary-dk
+        ),
+        url(../img/real-estate-2.png);
+    }
+
+    &--real-estate2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-lt,
+          $color-tertiary-dk
+        ),
+        url(../img/real-estate-3.png);
+    }
+
+    &--real-estate3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-lt,
+          $color-secondary-dk
+        ),
+        url(../img/real-estate-4.png);
+    }
+
+    &--wedding1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-lt,
+          $color-primary-dk
+        ),
+        url(../img/wedding-2.jpg);
+      background-position: top;
+    }
+
+    &--wedding2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-lt,
+          $color-tertiary-dk
+        ),
+        url(../img/wedding-3.jpg);
+    }
+
+    &--wedding3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-lt,
+          $color-secondary-dk
+        ),
+        url(../img/wedding-4.png);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-white;
+    position: absolute;
+    top: 17rem;
+    right: 0;
+    width: 100%;
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-lt, 0.85),
+        rgba($color-primary-dk, 0.85)
+      );
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-lt, 0.85),
+        rgba($color-tertiary-dk, 0.85)
+      );
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-lt, 0.85),
+        rgba($color-secondary-dk, 0.85)
+      );
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-lt2;
+        }
+      }
+    }
+  }
+
+  // FRONT SIDE STYLING
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  &__price-box {
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 8rem;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 8rem;
+    font-weight: 100;
+  }
+
+  //@include respond(tab-port) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    height: auto;
+    border-radius: 3px;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    margin-bottom: 2rem;
+
+    &__heading--re {
+      top: 11rem;
+    }
+
     &__side {
-        height: 59rem;
-        transition: all .8s ease; 
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        -webkit-perspective: 0;
-        -webkit-backface-visibility: hidden;
-        -webkit-transform: translate3d(0,0,0);
-        visibility:visible;
-        backface-visibility: hidden;
-        border-radius: 3px;
-        overflow: hidden;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+      height: auto;
+      position: relative;
+      box-shadow: none;
 
-        &-bp{
-            height: 61rem;
-        }
-
-        &--front {
-            background-color: $color-white;
-        }
-
-        &--back {
-            transform: rotateY(180deg);
-
-            &-1 {
-                background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk);
-            }
-
-            &-2 {
-                background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk);
-            }
-
-            &-3 {
-                background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk);
-            }
-        }
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+      }
     }
-  
 
     &:hover &__side--front {
-        transform: rotateY(-180deg);
-    }
-
-    &:hover &__side--back {
-        transform: rotateY(0);
-    }
-
-
-    // FRONT SIDE STYLING
-    &__picture {
-        background-size: cover;
-        height: 23rem;
-        background-blend-mode: screen;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px;
-        background-position: center;
-        
-        &--aerial-photography1 {
-            background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk), 
-            url(../img/aerial-photography-2.jpg);
-        }
-
-        &--aerial-photography2 {
-            background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk), 
-            url(../img/aerial-photography-3.jpg);
-        }
-
-        &--aerial-photography3 {
-            background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk), 
-            url(../img/aerial-photography-4.jpg);
-        }
-
-        &--business-promo1 {
-            background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk), 
-            url(../img/business-promo-2.jpg);
-        }
-
-        &--business-promo2 {
-            background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk), 
-            url(../img/business-promo-3.jpg);
-        }
-
-        &--business-promo3 {
-            background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk), 
-            url(../img/business-promo-4.jpg);
-        }
-
-        &--editing1 {
-            background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk), 
-            url(../img/editing-2.jpg);
-        }
-
-        &--editing2 {
-            background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk), 
-            url(../img/editing-3.jpg);
-        }
-
-        &--editing3 {
-            background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk), 
-            url(../img/editing-4.jpg);
-        }
-
-        &--events1 {
-            background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk), 
-            url(../img/events-2.jpg);
-        }
-
-        &--events2 {
-            background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk), 
-            url(../img/events-3.jpg);
-        }
-
-        &--events3 {
-            background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk), 
-            url(../img/events-4.jpg);
-        }
-
-        &--music-videos1 {
-            background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk), 
-            url(../img/music-videos-2.jpg);
-        }
-
-        &--music-videos2 {
-            background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk), 
-            url(../img/music-videos-3.jpg);
-        }
-
-        &--music-videos3 {
-            background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk), 
-            url(../img/music-videos-4.jpg);
-        }
-
-        &--personal-promo1 {
-            background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk), 
-            url(../img/personal-promo-2.jpg);
-        }
-
-        &--personal-promo2 {
-            background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk), 
-            url(../img/personal-promo-3.jpg);
-        }
-
-        &--personal-promo3 {
-            background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk), 
-            url(../img/personal-promo-4.jpg);
-        }
-
-        &--real-estate1 {
-            background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk), 
-            url(../img/real-estate-2.jpg);
-        }
-
-        &--real-estate2 {
-            background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk), 
-            url(../img/real-estate-3.jpg);
-        }
-
-        &--real-estate3 {
-            background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk), 
-            url(../img/real-estate-4.jpg);
-        }
-
-        &--wedding1 {
-            background-image: linear-gradient(to right bottom, $color-primary-lt, $color-primary-dk), 
-            url(../img/wedding-2.jpg);
-        }
-
-        &--wedding2 {
-            background-image: linear-gradient(to right bottom, $color-tertiary-lt, $color-tertiary-dk), 
-            url(../img/wedding-3.jpg);
-        }
-
-        &--wedding3 {
-            background-image: linear-gradient(to right bottom, $color-secondary-lt, $color-secondary-dk), 
-            url(../img/wedding-4.jpg);
-        }
-
-
-    }
-
-    &__heading {
-        font-size: 2.8rem;
-        font-weight: 300;
-        text-transform: uppercase;
-        text-align: right;
-        color: $color-white;
-        position: absolute;
-        top: 17rem;
-        right: 0;
-        width: 100%;
-    
-    }
-
-    &__heading-span {
-        padding: 1rem 1.5rem;
-        -webkit-box-decoration-break: clone;
-        box-decoration-break: clone;
-
-        &--1 {
-            background-image: linear-gradient(to right bottom, 
-            rgba($color-primary-lt, .85), 
-            rgba($color-primary-dk, .85));
-        }
-
-        &--2 {
-            background-image: linear-gradient(to right bottom, 
-            rgba($color-tertiary-lt, .85), 
-            rgba($color-tertiary-dk, .85));
-        }
-
-        &--3 {
-            background-image: linear-gradient(to right bottom, 
-            rgba($color-secondary-lt, .85), 
-            rgba($color-secondary-dk, .85));
-        }
+      transform: rotateY(0);
     }
 
     &__details {
-        padding: 3rem;
-
-        ul {
-            list-style: none;
-            width: 80%;
-            margin: 0 auto;
-
-            li {
-                text-align: center;
-                font-size: 1.5rem;
-                padding: 1rem;
-
-                &:not(:last-child) {
-                    border-bottom: 1px solid $color-grey-lt2;
-                }
-            }
-        }
+      padding: 1rem 3rem;
     }
 
     // FRONT SIDE STYLING
     &__cta {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 90%;
-        text-align: center;
+      position: relative;
+      top: 0%;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      padding: 5rem 4rem 4rem 4rem;
     }
 
     &__price-box {
-        text-align: center;
-        color: $color-white;
-        margin-bottom: 8rem;
+      margin-bottom: 3rem;
     }
 
+    &__price-value,
     &__price-only {
-        font-size: 1.4rem;
-        text-transform: uppercase;
+      text-align: center;
     }
 
     &__price-value {
-        font-size: 8rem;
-        font-weight: 100;
+      font-size: 6rem;
     }
-
-
-
-
-
-    //@include respond(tab-port) {
-    @media only screen and (max-width: 56.25em),
-            only screen and (hover: none) {
-
-        height: auto;
-        border-radius: 3px;
-        background-color: $color-white;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
-        margin-bottom: 2rem;
-        
-        
-        &__side {
-            height: auto;
-            position: relative;
-            box-shadow: none;
-
-            &--back {
-                transform: rotateY(0);
-                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-            }
-        }
-    
-        &:hover &__side--front {
-            transform: rotateY(0);
-        }
-
-    
-        &__details {
-            padding: 1rem 3rem;
-        }
-
-        // FRONT SIDE STYLING
-        &__cta {
-            position: relative;
-            top: 0%;
-            left: 0;
-            transform: translate(0);
-            width: 100%;
-            padding: 5rem 4rem 4rem 4rem;
-        }
-
-        &__price-box {
-            margin-bottom: 3rem;
-            
-        }
-
-        &__price-value,
-        &__price-only{
-            text-align:center;
-        }
-
-        &__price-value {
-            font-size: 6rem;
-            
-        }
-    }
-
+  }
 }
