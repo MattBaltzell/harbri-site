@@ -1,0 +1,93 @@
+.vid-gallery-aerial-photography {
+  grid-template-areas: "vid1 vid2 vid3";
+
+  .video {
+    height: 18vw;
+  }
+
+  .v1 {
+    grid-area: vid1;
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/wedding_ryan-emily.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/wedding_ryan-emily.jpg);
+    }
+  }
+
+  .v2 {
+    grid-area: vid2;
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/wedding_ryan-emily.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/wedding_ryan-emily.jpg);
+    }
+  }
+
+  .v3 {
+    grid-area: vid3;
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/wedding_ryan-emily.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/wedding_ryan-emily.jpg);
+    }
+  }
+}
+
+@media only screen and (max-device-width: 710px) {
+  .vid-gallery-aerial-photography {
+    grid-template-areas:
+      "vid1 vid1"
+      "vid2 vid3";
+    margin-bottom: 4rem;
+
+    .video {
+      height: 25vh;
+    }
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  .our-work {
+    &__text-box {
+      margin-bottom: 5rem;
+    }
+  }
+
+  .vid-gallery-aerial-photography {
+    grid-template-areas:
+      "vid1"
+      "vid2"
+      "vid3";
+
+    grid-gap: 1rem;
+    margin-bottom: 4rem;
+
+    .video {
+      height: 16rem;
+    }
+  }
+}

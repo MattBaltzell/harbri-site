@@ -416,7 +416,7 @@ MEDIA QUERIES
 }
 
 .card-ap {
-  height: 45.5rem;
+  height: 32.5rem;
 }
 
 .card-bp {
@@ -461,7 +461,7 @@ MEDIA QUERIES
 }
 
 .card__side-ap {
-  height: 45.5rem;
+  height: 32.5rem;
 }
 
 .card__side-bp {
@@ -1777,71 +1777,6 @@ MEDIA QUERIES
   }
   .vid-gallery-business-promo .video {
     height: 16rem;
-  }
-}
-
-.vid-gallery-editing {
-      grid-template-areas: "vid1";
-}
-
-.vid-gallery-editing .video {
-  height: 48vw;
-}
-
-.vid-gallery-editing .v1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: vid1;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/wedding_ryan-emily.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
-}
-
-.vid-gallery-editing .v1:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/wedding_ryan-emily.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
-}
-
-.vid-gallery-editing .v2 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: vid2;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/wedding_ryan-emily.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
-}
-
-.vid-gallery-editing .v2:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/wedding_ryan-emily.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
-}
-
-.vid-gallery-editing .v3 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: vid3;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/wedding_ryan-emily.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
-}
-
-.vid-gallery-editing .v3:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/wedding_ryan-emily.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
-}
-
-@media only screen and (max-device-width: 710px) {
-  .vid-gallery-editing {
-        grid-template-areas: "vid1";
-    margin-bottom: 4rem;
-  }
-}
-
-@media only screen and (max-device-width: 480px) {
-  .our-work__text-box {
-    margin-bottom: 5rem;
-  }
-  .vid-gallery-editing {
-        grid-template-areas: "vid1";
-    grid-gap: 1rem;
-    margin-bottom: 4rem;
   }
 }
 

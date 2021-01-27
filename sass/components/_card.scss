@@ -5,6 +5,10 @@
   position: relative;
   height: 58rem;
 
+  &-ap {
+    height: 45.5rem;
+  }
+
   &-bp {
     height: 62.5rem;
   }
@@ -35,11 +39,17 @@
     -webkit-perspective: 0;
     -webkit-backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
+    perspective: 0;
     visibility: visible;
+    transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &-ap {
+      height: 45.5rem;
+    }
 
     &-bp {
       height: 62.5rem;
