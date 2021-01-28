@@ -41,6 +41,22 @@ q {
   color: $color-grey-lt2;
 }
 
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $color-grey-lt2;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: $color-grey-lt2;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: $color-grey-lt2;
+}
+
 .txt-wht {
   color: $color-white;
 }

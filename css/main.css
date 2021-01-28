@@ -195,6 +195,23 @@ q {
   color: #dddddd;
 }
 
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #dddddd;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #dddddd;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #dddddd;
+}
+
 .txt-wht {
   color: #fff;
 }
@@ -1546,12 +1563,17 @@ MEDIA QUERIES
   font-weight: 700;
 }
 
+.contact__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .contact__container .heading-3 {
   font-size: 2.2rem;
   margin-bottom: 2rem;
 }
 
-.contact__container--left .contact__text-box p {
+.contact__container p {
   font-size: 2rem;
 }
 
@@ -1573,6 +1595,24 @@ MEDIA QUERIES
 .contact__form--message {
   min-height: 10rem;
   margin-bottom: 2rem;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .contact {
+    grid-column: full-start / full-end;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .contact__text-box {
+    margin-bottom: 4rem;
+  }
+  .contact__container {
+    grid-template-columns: 1fr;
+  }
+  .contact__container .heading-3 {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .vid-gallery-editing {

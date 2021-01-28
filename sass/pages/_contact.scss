@@ -10,19 +10,15 @@
   }
 
   &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
     & .heading-3 {
       font-size: 2.2rem;
       margin-bottom: 2rem;
     }
-    &--left {
-      & .contact__text-box {
-        & p {
-          font-size: 2rem;
-        }
-      }
-    }
-
-    &--right {
+    & p {
+      font-size: 2rem;
     }
   }
 
@@ -47,6 +43,27 @@
     &--message {
       min-height: 10rem;
       margin-bottom: 2rem;
+    }
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  .contact {
+    grid-column: full-start / full-end;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    &__text-box {
+      margin-bottom: 4rem;
+    }
+
+    &__container {
+      grid-template-columns: 1fr;
+
+      & .heading-3 {
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+      }
     }
   }
 }
