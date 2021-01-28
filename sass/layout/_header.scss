@@ -46,6 +46,18 @@
   background-position: bottom;
 }
 
+.contact-header {
+  background: linear-gradient(
+      to right bottom,
+      rgba($color-primary, 0.9),
+      rgba($color-secondary, 0.9)
+    ),
+    url(../img/contact-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
 .aerial-photography-header {
   background: linear-gradient(
       to right bottom,
@@ -55,7 +67,7 @@
     url(../img/aerial-photography-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
 }
 
 .business-promo-header {
@@ -76,7 +88,7 @@
       rgba($color-secondary-lt, 0.9),
       rgba($color-secondary-dk, 0.9)
     ),
-    url(../img/editing-hero.jpg);
+    url(../img/editing-hero.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -88,7 +100,7 @@
       rgba($color-secondary-lt, 0.9),
       rgba($color-secondary-dk, 0.9)
     ),
-    url(../img/events-hero.jpg);
+    url(../img/events-hero.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -127,7 +139,7 @@
     url(../img/real-estate-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
 }
 
 .wedding-header {

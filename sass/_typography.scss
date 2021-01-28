@@ -6,10 +6,6 @@ body {
   color: $color-grey-md;
 }
 
-.txt-wht {
-  color: $color-white;
-}
-
 .heading-1 {
   color: $color-white;
   text-transform: uppercase;
@@ -43,6 +39,22 @@ body {
 
 q {
   color: $color-grey-lt2;
+}
+
+.txt-wht {
+  color: $color-white;
+}
+
+.txt-blk {
+  color: $color-black;
+}
+
+.txt-pri {
+  color: $color-primary;
+}
+
+.txt-sec {
+  color: $color-secondary;
 }
 
 .not-offered {

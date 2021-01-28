@@ -2,11 +2,9 @@
 @import "base";
 @import "typography";
 
-
 @import "components/button";
 @import "components/card";
 @import "components/testimonial";
-
 
 @import "layout/header";
 @import "layout/navigation";
@@ -15,10 +13,11 @@
 @import "layout/services";
 @import "layout/testimonials";
 
-
 @import "pages/home";
+@import "pages/about";
 @import "pages/aerial-photography";
 @import "pages/business-promo";
+@import "pages/contact";
 @import "pages/editing";
 @import "pages/events";
 @import "pages/music-videos";
