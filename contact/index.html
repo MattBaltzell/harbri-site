@@ -87,17 +87,23 @@
                     </div>
 
                     <div class="contact__container--right">
+                        <h3 class="heading-3 txt-sec ta-left">
+                            Request a quote:
+                        </h3>
                         <div class="contact__form">
-                            <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+                            <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" class="contact__form">
                                 <p>
-                                  <label>Your Name: <input type="text" name="name" /></label>   
+                                  <label class="label label-name">Your Name:</label>  
+                                  <input type="text" name="name" class= " input contact__form--name"/> 
                                 </p>
                                 <p>
-                                  <label>Your Email: <input type="email" name="email" /></label>
+                                  <label class="label label-email">Your Email: </label>
+                                  <input type="email" name="email"class= "input contact__form--email" />
                                 </p>
                                 
                                 <p>
-                                  <label>Message: <textarea name="message"></textarea></label>
+                                  <label class="label label-message">Message:</label>
+                                  <textarea name="message" placeholder="Tell us a little about your project." class= "input contact__form--message"></textarea>
                                 </p>
                                 <div data-netlify-recaptcha="true"></div>
                                 <p>
