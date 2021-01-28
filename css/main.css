@@ -1,33 +1,78 @@
-@keyframes moveInLeft {
+@-webkit-keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-10rem);
+    -webkit-transform: translateX(-10rem);
+            transform: translateX(-10rem);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10rem);
+            transform: translateX(-10rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(10rem);
+            transform: translateX(10rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(10rem);
+    -webkit-transform: translateX(10rem);
+            transform: translateX(10rem);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
   }
 }
 
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(3rem);
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
   }
   100% {
     opacity: 1;
-    transform: translate(0);
+    -webkit-transform: translate(0);
+            transform: translate(0);
   }
 }
 
@@ -40,7 +85,8 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 html {
@@ -50,34 +96,55 @@ html {
 }
 
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 section {
-  clip-path: polygon(0 10rem, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 10rem, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 10rem, 100% 0, 100% 100%, 0 100%);
 }
 
 .container {
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: 100vh repeat(4, min-content);
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  -ms-grid-rows: 100vh (min-content)[4];
+      grid-template-rows: 100vh repeat(4, -webkit-min-content);
+      grid-template-rows: 100vh repeat(4, min-content);
+  -ms-grid-columns: [full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(min-content, 15rem) [col-end])[8] [center-end] minmax(6rem, 1fr) [full-end];
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   position: relative;
 }
 
 .footer {
   background-color: #63b99a;
+  background: -webkit-gradient(linear, left top, right top, from(#63b99a), to(#207181));
   background: linear-gradient(to right, #63b99a, #207181);
   grid-column: full-start / full-end;
   padding: 8rem 3rem 4rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: 120rem;
   margin-bottom: 2rem;
 }
@@ -87,8 +154,12 @@ section {
 }
 
 .footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 5rem;
 }
 
@@ -96,19 +167,26 @@ section {
   height: 5rem;
   width: 5rem;
   margin: 1rem;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .footer .social--icons:hover {
-  transform: translateY(-3px);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
   border-radius: 50%;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .footer .social--icons:active {
-  transform: translateY(-1px);
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
   border-radius: 50%;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .footer__logo {
@@ -122,7 +200,10 @@ section {
     padding: 5rem 3rem 2rem 3rem;
   }
   .footer__info {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .footer__logo {
     height: 12rem;
@@ -193,6 +274,27 @@ body {
 
 q {
   color: #dddddd;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #dddddd;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #dddddd;
+  opacity: 1;
+  /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #dddddd;
+  opacity: 1;
+  /* Firefox */
 }
 
 ::placeholder {
@@ -309,23 +411,29 @@ MEDIA QUERIES
   padding: 1.5rem 4rem;
   border: 0;
   border-radius: 10rem;
+  -webkit-transition: all .2s;
   transition: all .2s;
   outline: none;
-  justify-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
   color: #fff;
   background-color: #63b99a;
   cursor: pointer;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   background-color: #4dad8a;
 }
 
 .btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .btn--white, .btn--white:link, .btn--white:visited, .btn--white:hover {
@@ -354,7 +462,8 @@ MEDIA QUERIES
 }
 
 .card {
-  perspective: 150rem;
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
   height: 58rem;
@@ -386,6 +495,7 @@ MEDIA QUERIES
 
 .card__side {
   height: 58rem;
+  -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
   position: absolute;
   top: 0;
@@ -400,7 +510,8 @@ MEDIA QUERIES
   backface-visibility: hidden;
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 
 .card__side-ap {
@@ -432,33 +543,40 @@ MEDIA QUERIES
 }
 
 .card__side--back {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .card__side--back-1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ac4a9), to(#4dad8a));
   background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a);
 }
 
 .card__side--back-2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#f7c381), to(#f3a541));
   background-image: linear-gradient(to right bottom, #f7c381, #f3a541);
 }
 
 .card__side--back-3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2a95aa), to(#164d58));
   background-image: linear-gradient(to right bottom, #2a95aa, #164d58);
 }
 
 .card:hover .card__side--front {
-  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
 }
 
 .card:hover .card__side--back {
-  transform: rotateY(0);
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
 }
 
 .card__picture {
   background-size: cover;
   height: 23rem;
   background-blend-mode: screen;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
@@ -466,99 +584,123 @@ MEDIA QUERIES
 }
 
 .card__picture--aerial-photography1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ac4a9), to(#4dad8a)), url(../img/aerial-photography-2.jpg);
   background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/aerial-photography-2.jpg);
 }
 
 .card__picture--aerial-photography2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#f7c381), to(#f3a541)), url(../img/aerial-photography-3.jpg);
   background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/aerial-photography-3.jpg);
 }
 
 .card__picture--aerial-photography3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2a95aa), to(#164d58)), url(../img/aerial-photography-4.jpg);
   background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/aerial-photography-4.jpg);
 }
 
 .card__picture--business-promo1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ac4a9), to(#4dad8a)), url(../img/business-promo-2.png);
   background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/business-promo-2.png);
 }
 
 .card__picture--business-promo2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#f7c381), to(#f3a541)), url(../img/business-promo-3.png);
   background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/business-promo-3.png);
 }
 
 .card__picture--business-promo3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2a95aa), to(#164d58)), url(../img/business-promo-4.png);
   background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/business-promo-4.png);
 }
 
 .card__picture--editing1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ac4a9), to(#4dad8a)), url(../img/editing-2.png);
   background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/editing-2.png);
 }
 
 .card__picture--editing2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#f7c381), to(#f3a541)), url(../img/editing-3.png);
   background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/editing-3.png);
 }
 
 .card__picture--editing3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2a95aa), to(#164d58)), url(../img/editing-4.png);
   background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/editing-4.png);
 }
 
 .card__picture--events1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ac4a9), to(#4dad8a)), url(../img/events-2.png);
   background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/events-2.png);
 }
 
 .card__picture--events2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#f7c381), to(#f3a541)), url(../img/events-3.png);
   background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/events-3.png);
 }
 
 .card__picture--events3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2a95aa), to(#164d58)), url(../img/events-4.png);
   background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/events-4.png);
 }
 
 .card__picture--music-videos1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ac4a9), to(#4dad8a)), url(../img/music-videos-2.png);
   background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/music-videos-2.png);
 }
 
 .card__picture--music-videos2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#f7c381), to(#f3a541)), url(../img/music-videos-3.png);
   background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/music-videos-3.png);
 }
 
 .card__picture--music-videos3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2a95aa), to(#164d58)), url(../img/music-videos-4.png);
   background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/music-videos-4.png);
 }
 
 .card__picture--personal-promo1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ac4a9), to(#4dad8a)), url(../img/personal-promo-2.jpg);
   background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/personal-promo-2.jpg);
 }
 
 .card__picture--personal-promo2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#f7c381), to(#f3a541)), url(../img/personal-promo-3.jpg);
   background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/personal-promo-3.jpg);
 }
 
 .card__picture--personal-promo3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2a95aa), to(#164d58)), url(../img/personal-promo-4.jpg);
   background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/personal-promo-4.jpg);
 }
 
 .card__picture--real-estate1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ac4a9), to(#4dad8a)), url(../img/real-estate-2.png);
   background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/real-estate-2.png);
 }
 
 .card__picture--real-estate2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#f7c381), to(#f3a541)), url(../img/real-estate-3.png);
   background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/real-estate-3.png);
 }
 
 .card__picture--real-estate3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2a95aa), to(#164d58)), url(../img/real-estate-4.png);
   background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/real-estate-4.png);
 }
 
 .card__picture--wedding1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ac4a9), to(#4dad8a)), url(../img/wedding-2.jpg);
   background-image: linear-gradient(to right bottom, #7ac4a9, #4dad8a), url(../img/wedding-2.jpg);
   background-position: top;
 }
 
 .card__picture--wedding2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#f7c381), to(#f3a541)), url(../img/wedding-3.jpg);
   background-image: linear-gradient(to right bottom, #f7c381, #f3a541), url(../img/wedding-3.jpg);
 }
 
 .card__picture--wedding3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2a95aa), to(#164d58)), url(../img/wedding-4.png);
   background-image: linear-gradient(to right bottom, #2a95aa, #164d58), url(../img/wedding-4.png);
 }
 
@@ -576,18 +718,22 @@ MEDIA QUERIES
 
 .card__heading-span {
   padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
 
 .card__heading-span--1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(122, 196, 169, 0.85)), to(rgba(77, 173, 138, 0.85)));
   background-image: linear-gradient(to right bottom, rgba(122, 196, 169, 0.85), rgba(77, 173, 138, 0.85));
 }
 
 .card__heading-span--2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(247, 195, 129, 0.85)), to(rgba(243, 165, 65, 0.85)));
   background-image: linear-gradient(to right bottom, rgba(247, 195, 129, 0.85), rgba(243, 165, 65, 0.85));
 }
 
 .card__heading-span--3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(42, 149, 170, 0.85)), to(rgba(22, 77, 88, 0.85)));
   background-image: linear-gradient(to right bottom, rgba(42, 149, 170, 0.85), rgba(22, 77, 88, 0.85));
 }
 
@@ -615,7 +761,8 @@ MEDIA QUERIES
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 90%;
   text-align: center;
 }
@@ -641,7 +788,8 @@ MEDIA QUERIES
     height: auto;
     border-radius: 3px;
     background-color: #fff;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+            box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     margin-bottom: 2rem;
   }
   .card__heading--re {
@@ -650,14 +798,18 @@ MEDIA QUERIES
   .card__side {
     height: auto;
     position: relative;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .card__side--back {
-    transform: rotateY(0);
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
   }
   .card:hover .card__side--front {
-    transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
   }
   .card__details {
     padding: 1rem 3rem;
@@ -666,7 +818,8 @@ MEDIA QUERIES
     position: relative;
     top: 0%;
     left: 0;
-    transform: translate(0);
+    -webkit-transform: translate(0);
+            transform: translate(0);
     width: 100%;
     padding: 5rem 4rem 4rem 4rem;
   }
@@ -690,7 +843,8 @@ MEDIA QUERIES
   width: 100%;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .testimonial {
@@ -749,13 +903,19 @@ MEDIA QUERIES
 .header {
   background-size: cover;
   background-attachment: fixed;
-  clip-path: polygon(0 0rem, 100% 0, 100% 90%, 0 100%);
+  -webkit-clip-path: polygon(0 0rem, 100% 0, 100% 90%, 0 100%);
+          clip-path: polygon(0 0rem, 100% 0, 100% 90%, 0 100%);
+  display: -ms-grid;
   display: grid;
   grid-column: full-start / full-end;
   color: #fff;
-  align-content: stretch;
-  justify-content: center;
-  grid-template-rows: 1fr;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
   padding: 3rem;
   position: relative;
 }
@@ -771,8 +931,11 @@ MEDIA QUERIES
 }
 
 .header__text-box {
-  align-self: center;
-  justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
   text-align: center;
   max-width: 100rem;
 }
@@ -782,6 +945,7 @@ MEDIA QUERIES
 }
 
 .home-header {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(99, 185, 154, 0.9)), to(rgba(32, 113, 129, 0.9))), url(../img/hero.jpg);
   background: linear-gradient(to right bottom, rgba(99, 185, 154, 0.9), rgba(32, 113, 129, 0.9)), url(../img/hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -789,6 +953,7 @@ MEDIA QUERIES
 }
 
 .contact-header {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(99, 185, 154, 0.9)), to(rgba(32, 113, 129, 0.9))), url(../img/contact-hero.jpg);
   background: linear-gradient(to right bottom, rgba(99, 185, 154, 0.9), rgba(32, 113, 129, 0.9)), url(../img/contact-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -796,6 +961,7 @@ MEDIA QUERIES
 }
 
 .aerial-photography-header {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(42, 149, 170, 0.9)), to(rgba(22, 77, 88, 0.9))), url(../img/aerial-photography-hero.jpg);
   background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/aerial-photography-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -803,6 +969,7 @@ MEDIA QUERIES
 }
 
 .business-promo-header {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(42, 149, 170, 0.9)), to(rgba(22, 77, 88, 0.9))), url(../img/business-promo-hero.jpg);
   background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/business-promo-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -810,6 +977,7 @@ MEDIA QUERIES
 }
 
 .editing-header {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(42, 149, 170, 0.9)), to(rgba(22, 77, 88, 0.9))), url(../img/editing-hero.png);
   background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/editing-hero.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -817,6 +985,7 @@ MEDIA QUERIES
 }
 
 .events-header {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(42, 149, 170, 0.9)), to(rgba(22, 77, 88, 0.9))), url(../img/events-hero.png);
   background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/events-hero.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -824,6 +993,7 @@ MEDIA QUERIES
 }
 
 .music-videos-header {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(42, 149, 170, 0.9)), to(rgba(22, 77, 88, 0.9))), url(../img/music-videos-hero.jpg);
   background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/music-videos-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -831,6 +1001,7 @@ MEDIA QUERIES
 }
 
 .personal-promo-header {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(42, 149, 170, 0.9)), to(rgba(22, 77, 88, 0.9))), url(../img/personal-promo-hero.jpg);
   background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/personal-promo-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -838,6 +1009,7 @@ MEDIA QUERIES
 }
 
 .real-estate-header {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(42, 149, 170, 0.9)), to(rgba(22, 77, 88, 0.9))), url(../img/real-estate-hero.jpg);
   background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/real-estate-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -845,6 +1017,7 @@ MEDIA QUERIES
 }
 
 .wedding-header {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(42, 149, 170, 0.9)), to(rgba(22, 77, 88, 0.9))), url(../img/wedding-hero.jpg);
   background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/wedding-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -902,7 +1075,8 @@ MEDIA QUERIES
   top: 5rem;
   right: 5rem;
   z-index: 2000;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   text-align: center;
   cursor: pointer;
 }
@@ -916,7 +1090,10 @@ MEDIA QUERIES
   right: 5.5rem;
   background-image: radial-gradient(#7ac4a9, #2a95aa);
   z-index: 1000;
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .navigation__nav {
@@ -927,7 +1104,9 @@ MEDIA QUERIES
   z-index: 1500;
   width: 0;
   opacity: 0;
-  transform: translateX(-100rem);
+  -webkit-transform: translateX(-100rem);
+          transform: translateX(-100rem);
+  -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -935,7 +1114,8 @@ MEDIA QUERIES
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   list-style: none;
   text-align: center;
 }
@@ -954,23 +1134,27 @@ MEDIA QUERIES
   text-transform: uppercase;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
   background-size: 250%;
+  -webkit-transition: all .4s;
   transition: all .4s;
 }
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
   color: #63b99a;
-  transform: translateX(1rem);
+  -webkit-transform: translateX(1rem);
+          transform: translateX(1rem);
 }
 
 .navigation__checkbox:checked ~ .navigation__background {
-  transform: scale(100);
+  -webkit-transform: scale(100);
+          transform: scale(100);
 }
 
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
   width: 100%;
-  transform: translateX(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .navigation__icon {
@@ -989,6 +1173,7 @@ MEDIA QUERIES
   content: "";
   position: absolute;
   left: 0;
+  -webkit-transition: all .2s;
   transition: all .2s;
 }
 
@@ -1013,18 +1198,21 @@ MEDIA QUERIES
 }
 
 .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
-  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
   top: 0;
 }
 
 .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
-  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
   top: 0;
 }
 
 @media only screen and (max-device-width: 1024px) {
   .navigation__button, .navigation__background {
-    transform: scale(0.9) translate(1rem, -0.5rem);
+    -webkit-transform: scale(0.9) translate(1rem, -0.5rem);
+            transform: scale(0.9) translate(1rem, -0.5rem);
   }
 }
 
@@ -1033,7 +1221,8 @@ MEDIA QUERIES
     font-size: 2.2rem;
   }
   .navigation__button, .navigation__background {
-    transform: scale(0.8) translate(3rem, -3rem);
+    -webkit-transform: scale(0.8) translate(3rem, -3rem);
+            transform: scale(0.8) translate(3rem, -3rem);
   }
 }
 
@@ -1042,19 +1231,22 @@ MEDIA QUERIES
   padding: 14rem 3rem 20rem 3rem;
   grid-column: full-start / full-end;
   text-align: center;
+  display: -ms-grid;
   display: grid;
 }
 
 .our-work__text-box {
   margin-bottom: 6rem;
   max-width: 100rem;
-  justify-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .vid-gallery {
   margin-bottom: 6rem;
+  display: -ms-grid;
   display: grid;
-  grid-template-areas: "vid1 vid1 vid1 vid2 vid2 vid2" "vid3 vid3 vid4 vid4 vid5 vid5";
+      grid-template-areas: "vid1 vid1 vid1 vid2 vid2 vid2" "vid3 vid3 vid4 vid4 vid5 vid5";
   grid-gap: 3rem;
 }
 
@@ -1063,58 +1255,81 @@ MEDIA QUERIES
   background-size: cover;
   background-position: center;
   position: relative;
+  -webkit-transition: all .3s;
   transition: all .3s;
 }
 
 .vid-gallery .video:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 .vid-gallery .v1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: vid1;
   height: 25vw;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/wedding_ryan-emily.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
 }
 
 .vid-gallery .v1:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/wedding_ryan-emily.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
 }
 
 .vid-gallery .v2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: vid2;
   height: 25vw;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/dentist_cedar-pearl.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/dentist_cedar-pearl.jpg);
 }
 
 .vid-gallery .v2:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/dentist_cedar-pearl.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/dentist_cedar-pearl.jpg);
 }
 
 .vid-gallery .v3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: vid3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/lagoon-bc.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/lagoon-bc.jpg);
 }
 
 .vid-gallery .v3:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/lagoon-bc.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/lagoon-bc.jpg);
 }
 
 .vid-gallery .v4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: vid4;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid-montgomery.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid-montgomery.jpg);
 }
 
 .vid-gallery .v4:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid-montgomery.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid-montgomery.jpg);
 }
 
 .vid-gallery .v5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: vid5;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/realestate-maribeth.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/realestate-maribeth.jpg);
 }
 
 .vid-gallery .v5:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/realestate-maribeth.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/realestate-maribeth.jpg);
 }
 
@@ -1124,7 +1339,8 @@ MEDIA QUERIES
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .fa-play {
@@ -1148,7 +1364,7 @@ MEDIA QUERIES
 
 @media only screen and (max-device-width: 710px) {
   .vid-gallery {
-    grid-template-areas: "vid1 vid1" "vid2 vid3" "vid4 vid5";
+        grid-template-areas: "vid1 vid1" "vid2 vid3" "vid4 vid5";
     margin-bottom: 4rem;
   }
   .vid-gallery .video {
@@ -1161,7 +1377,7 @@ MEDIA QUERIES
     margin-bottom: 5rem;
   }
   .vid-gallery {
-    grid-template-areas: "vid1" "vid2" "vid3" "vid4" "vid5";
+        grid-template-areas: "vid1" "vid2" "vid3" "vid4" "vid5";
     grid-gap: 1rem;
     margin-bottom: 4rem;
   }
@@ -1175,18 +1391,23 @@ MEDIA QUERIES
   padding: 10rem 0 14rem 0;
   grid-column: full-start / full-end;
   text-align: center;
+  display: -ms-grid;
   display: grid;
 }
 
 .packages__text-box {
   margin-bottom: 6rem;
   max-width: 100rem;
-  justify-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .packages__container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  -ms-grid-columns: [full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(min-content, 15rem) [col-end])[8] [center-end] minmax(6rem, 1fr) [full-end];
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   grid-gap: 2rem;
 }
 
@@ -1195,10 +1416,13 @@ MEDIA QUERIES
 }
 
 .packages__cards {
+  display: -ms-grid;
   display: grid;
   grid-column: center-start / center-end;
-  column-gap: 3rem;
-  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
 }
 
 .packages__list-box {
@@ -1218,8 +1442,12 @@ MEDIA QUERIES
     margin-bottom: 3rem;
   }
   .packages__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 0 3rem;
   }
   .packages__list-box {
@@ -1230,8 +1458,13 @@ MEDIA QUERIES
 @media only screen and (max-device-width: 770px) {
   .packages__cards {
     grid-column: full-start / full-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     justify-self: stretch;
     row-gap: 3rem;
   }
@@ -1243,6 +1476,7 @@ MEDIA QUERIES
   padding: 10rem 0 14rem 0;
   grid-column: center-start / center-end;
   text-align: center;
+  display: -ms-grid;
   display: grid;
 }
 
@@ -1250,13 +1484,16 @@ MEDIA QUERIES
 .contact__text-box {
   margin-bottom: 6rem;
   max-width: 100rem;
-  justify-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .services__container,
 .contact__container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
+  -ms-grid-columns: (minmax(34rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
   grid-gap: 2rem;
 }
 
@@ -1268,9 +1505,13 @@ MEDIA QUERIES
 .services__container--block,
 .contact__container--block {
   height: 20rem;
+  display: -ms-grid;
   display: grid;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   justify-items: center;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -1282,46 +1523,56 @@ MEDIA QUERIES
 
 .services__container--block:hover:not(:nth-child(5)),
 .contact__container--block:hover:not(:nth-child(5)) {
-  transform: translateY(-3px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 .services__weddings,
 .contact__weddings {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/wedding-1.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/wedding-1.jpg);
   background-size: cover;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .services__weddings:hover,
 .contact__weddings:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/wedding-1.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding-1.jpg);
 }
 
 .services__real-estate,
 .contact__real-estate {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/real-estate-1.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/real-estate-1.jpg);
   background-size: cover;
 }
 
 .services__real-estate:hover,
 .contact__real-estate:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/real-estate-1.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/real-estate-1.jpg);
 }
 
 .services__biz-promo,
 .contact__biz-promo {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/business-promo-1.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/business-promo-1.jpg);
   background-size: cover;
 }
 
 .services__biz-promo:hover,
 .contact__biz-promo:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/business-promo-1.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/business-promo-1.jpg);
 }
 
 .services__personal-promo,
 .contact__personal-promo {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/personal-promo-0.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/personal-promo-0.jpg);
   background-size: cover;
   background-position: center;
@@ -1329,22 +1580,26 @@ MEDIA QUERIES
 
 .services__personal-promo:hover,
 .contact__personal-promo:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/personal-promo-0.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/personal-promo-0.jpg);
 }
 
 .services__music-vid,
 .contact__music-vid {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/music-video-1.png);
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/music-video-1.png);
   background-size: cover;
 }
 
 .services__music-vid:hover,
 .contact__music-vid:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/music-video-1.png);
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/music-video-1.png);
 }
 
 .services__aerial,
 .contact__aerial {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/aerial-photo-1.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/aerial-photo-1.jpg);
   background-size: cover;
   background-position: center;
@@ -1352,28 +1607,33 @@ MEDIA QUERIES
 
 .services__aerial:hover,
 .contact__aerial:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/aerial-photo-1.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/aerial-photo-1.jpg);
 }
 
 .services__events,
 .contact__events {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/events-1.png);
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/events-1.png);
   background-size: cover;
 }
 
 .services__events:hover,
 .contact__events:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/events-1.png);
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/events-1.png);
 }
 
 .services__editing,
 .contact__editing {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/editing-1.png);
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/editing-1.png);
   background-size: cover;
 }
 
 .services__editing:hover,
 .contact__editing:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/editing-1.png);
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/editing-1.png);
 }
 
@@ -1404,7 +1664,8 @@ MEDIA QUERIES
   }
   .services__container {
     grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
   .services__container--block {
     height: 18rem;
@@ -1419,13 +1680,15 @@ MEDIA QUERIES
   background-color: #333;
   grid-column: full-start / full-end;
   text-align: center;
+  display: -ms-grid;
   display: grid;
 }
 
 .testimonials__text-box {
   padding-top: 16rem;
   max-width: 100rem;
-  justify-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 @media only screen and (max-device-width: 480px) {
@@ -1438,7 +1701,7 @@ MEDIA QUERIES
 }
 
 .vid-gallery-aerial-photography {
-  grid-template-areas: "vid1 vid2 vid3";
+      grid-template-areas: "vid1 vid2 vid3";
 }
 
 .vid-gallery-aerial-photography .video {
@@ -1446,35 +1709,47 @@ MEDIA QUERIES
 }
 
 .vid-gallery-aerial-photography .v1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: vid1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/wedding_ryan-emily.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
 }
 
 .vid-gallery-aerial-photography .v1:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/wedding_ryan-emily.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
 }
 
 .vid-gallery-aerial-photography .v2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: vid2;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/wedding_ryan-emily.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
 }
 
 .vid-gallery-aerial-photography .v2:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/wedding_ryan-emily.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
 }
 
 .vid-gallery-aerial-photography .v3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: vid3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/wedding_ryan-emily.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
 }
 
 .vid-gallery-aerial-photography .v3:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/wedding_ryan-emily.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
 }
 
 @media only screen and (max-device-width: 710px) {
   .vid-gallery-aerial-photography {
-    grid-template-areas: "vid1 vid1" "vid2 vid3";
+        grid-template-areas: "vid1 vid1" "vid2 vid3";
     margin-bottom: 4rem;
   }
   .vid-gallery-aerial-photography .video {
@@ -1487,7 +1762,7 @@ MEDIA QUERIES
     margin-bottom: 5rem;
   }
   .vid-gallery-aerial-photography {
-    grid-template-areas: "vid1" "vid2" "vid3";
+        grid-template-areas: "vid1" "vid2" "vid3";
     grid-gap: 1rem;
     margin-bottom: 4rem;
   }
@@ -1497,7 +1772,7 @@ MEDIA QUERIES
 }
 
 .vid-gallery-business-promo {
-  grid-template-areas: "vid1 vid2 vid3";
+      grid-template-areas: "vid1 vid2 vid3";
 }
 
 .vid-gallery-business-promo .video {
@@ -1505,35 +1780,47 @@ MEDIA QUERIES
 }
 
 .vid-gallery-business-promo .v1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: vid1;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid_bp-1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid_bp-1.jpg);
 }
 
 .vid-gallery-business-promo .v1:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid_bp-1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid_bp-1.jpg);
 }
 
 .vid-gallery-business-promo .v2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: vid2;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid_bp-2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid_bp-2.jpg);
 }
 
 .vid-gallery-business-promo .v2:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/wvid_bp-2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wvid_bp-2.jpg);
 }
 
 .vid-gallery-business-promo .v3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: vid3;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid_bp-3.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid_bp-3.jpg);
 }
 
 .vid-gallery-business-promo .v3:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid_bp-3.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid_bp-3.jpg);
 }
 
 @media only screen and (max-device-width: 710px) {
   .vid-gallery-business-promo {
-    grid-template-areas: "vid1 vid1" "vid2 vid3" "vid4 vid5";
+        grid-template-areas: "vid1 vid1" "vid2 vid3" "vid4 vid5";
     margin-bottom: 4rem;
   }
   .vid-gallery-business-promo .video {
@@ -1546,7 +1833,7 @@ MEDIA QUERIES
     margin-bottom: 5rem;
   }
   .vid-gallery-business-promo {
-    grid-template-areas: "vid1" "vid2" "vid3" "vid4" "vid5";
+        grid-template-areas: "vid1" "vid2" "vid3" "vid4" "vid5";
     grid-gap: 1rem;
     margin-bottom: 4rem;
   }
@@ -1564,8 +1851,10 @@ MEDIA QUERIES
 }
 
 .contact__container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
 .contact__container .heading-3 {
@@ -1578,8 +1867,13 @@ MEDIA QUERIES
 }
 
 .contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: left;
 }
 
@@ -1611,7 +1905,8 @@ MEDIA QUERIES
     margin-bottom: 4rem;
   }
   .contact__container {
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
   .contact__container .heading-3 {
     margin-top: 2rem;
@@ -1620,7 +1915,7 @@ MEDIA QUERIES
 }
 
 .vid-gallery-editing {
-  grid-template-areas: "vid1";
+      grid-template-areas: "vid1";
 }
 
 .vid-gallery-editing .video {
@@ -1628,35 +1923,47 @@ MEDIA QUERIES
 }
 
 .vid-gallery-editing .v1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: vid1;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid_editing-1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid_editing-1.jpg);
 }
 
 .vid-gallery-editing .v1:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid_editing-1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid_editing-1.jpg);
 }
 
 .vid-gallery-editing .v2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: vid2;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid_editing-2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid_editing-2.jpg);
 }
 
 .vid-gallery-editing .v2:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid_editing-2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid_editing-2.jpg);
 }
 
 .vid-gallery-editing .v3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: vid3;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid_editing-3.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid_editing-3.jpg);
 }
 
 .vid-gallery-editing .v3:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid_editing-3.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid_editing-3.jpg);
 }
 
 @media only screen and (max-device-width: 710px) {
   .vid-gallery-editing {
-    grid-template-areas: "vid1";
+        grid-template-areas: "vid1";
     margin-bottom: 4rem;
   }
 }
@@ -1666,14 +1973,15 @@ MEDIA QUERIES
     margin-bottom: 5rem;
   }
   .vid-gallery-editing {
-    grid-template-areas: "vid1";
+        grid-template-areas: "vid1";
     grid-gap: 1rem;
     margin-bottom: 4rem;
   }
 }
 
 .vid-gallery-events {
-  grid-template-columns: 1fr, 1fr;
+  -ms-grid-columns: 1fr, 1fr;
+      grid-template-columns: 1fr, 1fr;
 }
 
 .vid-gallery-events .video {
@@ -1681,21 +1989,29 @@ MEDIA QUERIES
 }
 
 .vid-gallery-events .v1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: vid1;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid_events-1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid_events-1.jpg);
 }
 
 .vid-gallery-events .v1:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid_events-1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid_events-1.jpg);
 }
 
 .vid-gallery-events .v2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: vid2;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_thompson.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid_events-2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid_events-2.jpg);
 }
 
 .vid-gallery-events .v2:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_thompson.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid_events-2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid_events-2.jpg);
 }
 
 @media only screen and (max-device-width: 710px) {
@@ -1718,7 +2034,8 @@ MEDIA QUERIES
 }
 
 .vid-gallery-music-videos {
-  grid-template-columns: 1fr, 1fr;
+  -ms-grid-columns: 1fr, 1fr;
+      grid-template-columns: 1fr, 1fr;
 }
 
 .vid-gallery-music-videos .video {
@@ -1726,21 +2043,29 @@ MEDIA QUERIES
 }
 
 .vid-gallery-music-videos .v1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: vid1;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid_music-vid-1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid_music-vid-1.jpg);
 }
 
 .vid-gallery-music-videos .v1:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid_music-vid-1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid_music-vid-1.jpg);
 }
 
 .vid-gallery-music-videos .v2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: vid2;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_thompson.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid_music-vid-2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid_music-vid-2.jpg);
 }
 
 .vid-gallery-music-videos .v2:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_thompson.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid_music-vid-2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid_music-vid-2.jpg);
 }
 
 @media only screen and (max-device-width: 710px) {
@@ -1763,7 +2088,7 @@ MEDIA QUERIES
 }
 
 .vid-gallery-personal-promo {
-  grid-template-areas: "vid1 vid2 vid3" "vid4 vid5 vid6";
+      grid-template-areas: "vid1 vid2 vid3" "vid4 vid5 vid6";
 }
 
 .vid-gallery-personal-promo .video {
@@ -1771,62 +2096,86 @@ MEDIA QUERIES
 }
 
 .vid-gallery-personal-promo .v1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: vid1;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid-pp-1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid-pp-1.jpg);
 }
 
 .vid-gallery-personal-promo .v1:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid-pp-1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid-pp-1.jpg);
 }
 
 .vid-gallery-personal-promo .v2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: vid2;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid-pp-2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid-pp-2.jpg);
 }
 
 .vid-gallery-personal-promo .v2:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid-pp-2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid-pp-2.jpg);
 }
 
 .vid-gallery-personal-promo .v3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: vid3;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid-pp-3.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid-pp-3.jpg);
 }
 
 .vid-gallery-personal-promo .v3:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid-pp-3.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid-pp-3.jpg);
 }
 
 .vid-gallery-personal-promo .v4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: vid4;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid-pp-4.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid-pp-4.jpg);
 }
 
 .vid-gallery-personal-promo .v4:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid-pp-4.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid-pp-4.jpg);
 }
 
 .vid-gallery-personal-promo .v5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: vid5;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid-pp-5.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid-pp-5.jpg);
 }
 
 .vid-gallery-personal-promo .v5:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid-pp-5.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid-pp-5.jpg);
 }
 
 .vid-gallery-personal-promo .v6 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
   grid-area: vid6;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid-pp-6.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid-pp-6.jpg);
 }
 
 .vid-gallery-personal-promo .v6:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid-pp-6.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid-pp-6.jpg);
 }
 
 @media only screen and (max-device-width: 710px) {
   .vid-gallery-personal-promo {
-    grid-template-areas: "vid1 vid2" "vid3 vid4" "vid5 vid6";
+        grid-template-areas: "vid1 vid2" "vid3 vid4" "vid5 vid6";
     margin-bottom: 4rem;
   }
   .vid-gallery-personal-promo .video {
@@ -1839,7 +2188,7 @@ MEDIA QUERIES
     margin-bottom: 5rem;
   }
   .vid-gallery-personal-promo {
-    grid-template-areas: "vid1" "vid2" "vid3" "vid4" "vid5" "vid6";
+        grid-template-areas: "vid1" "vid2" "vid3" "vid4" "vid5" "vid6";
     grid-gap: 1rem;
     margin-bottom: 4rem;
   }
@@ -1849,7 +2198,7 @@ MEDIA QUERIES
 }
 
 .vid-gallery-real-estate {
-  grid-template-areas: "vid1 vid2 vid3" "vid4 vid5 vid6";
+      grid-template-areas: "vid1 vid2 vid3" "vid4 vid5 vid6";
 }
 
 .vid-gallery-real-estate .video {
@@ -1857,62 +2206,86 @@ MEDIA QUERIES
 }
 
 .vid-gallery-real-estate .v1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: vid1;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid-re-1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid-re-1.jpg);
 }
 
 .vid-gallery-real-estate .v1:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid-re-1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid-re-1.jpg);
 }
 
 .vid-gallery-real-estate .v2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: vid2;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid-re-2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid-re-2.jpg);
 }
 
 .vid-gallery-real-estate .v2:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid-re-2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid-re-2.jpg);
 }
 
 .vid-gallery-real-estate .v3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: vid3;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid-re-3.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid-re-3.jpg);
 }
 
 .vid-gallery-real-estate .v3:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid-re-3.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid-re-3.jpg);
 }
 
 .vid-gallery-real-estate .v4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: vid4;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid-re-4.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid-re-4.jpg);
 }
 
 .vid-gallery-real-estate .v4:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid-re-4.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid-re-4.jpg);
 }
 
 .vid-gallery-real-estate .v5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: vid5;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid-re-5.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid-re-5.jpg);
 }
 
 .vid-gallery-real-estate .v5:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid-re-5.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid-re-5.jpg);
 }
 
 .vid-gallery-real-estate .v6 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
   grid-area: vid6;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid-re-6.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid-re-6.jpg);
 }
 
 .vid-gallery-real-estate .v6:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid-re-6.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid-re-6.jpg);
 }
 
 @media only screen and (max-device-width: 710px) {
   .vid-gallery-real-estate {
-    grid-template-areas: "vid1 vid2" "vid3 vid4" "vid5 vid6";
+        grid-template-areas: "vid1 vid2" "vid3 vid4" "vid5 vid6";
     margin-bottom: 4rem;
   }
   .vid-gallery-real-estate .video {
@@ -1925,7 +2298,7 @@ MEDIA QUERIES
     margin-bottom: 5rem;
   }
   .vid-gallery-real-estate {
-    grid-template-areas: "vid1" "vid2" "vid3" "vid4" "vid5" "vid6";
+        grid-template-areas: "vid1" "vid2" "vid3" "vid4" "vid5" "vid6";
     grid-gap: 1rem;
     margin-bottom: 4rem;
   }
@@ -1935,7 +2308,8 @@ MEDIA QUERIES
 }
 
 .vid-gallery-wedding {
-  grid-template-columns: 1fr, 1fr;
+  -ms-grid-columns: 1fr, 1fr;
+      grid-template-columns: 1fr, 1fr;
 }
 
 .vid-gallery-wedding .video {
@@ -1943,21 +2317,29 @@ MEDIA QUERIES
 }
 
 .vid-gallery-wedding .v1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: vid1;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid-wedding-1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid-wedding-1.jpg);
 }
 
 .vid-gallery-wedding .v1:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid-wedding-1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid-wedding-1.jpg);
 }
 
 .vid-gallery-wedding .v2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: vid2;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_thompson.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/vid-wedding-2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid-wedding-2.jpg);
 }
 
 .vid-gallery-wedding .v2:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_thompson.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url(../img/vid-wedding-2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid-wedding-2.jpg);
 }
 
 @media only screen and (max-device-width: 710px) {
