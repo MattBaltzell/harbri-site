@@ -1515,6 +1515,16 @@ MEDIA QUERIES
   transition: all 0.3s;
 }
 
+.services__container--block .heading-3,
+.contact__container--block .heading-3 {
+  display: block;
+  font-size: 1.6rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
 .services__container--block .logo-badge,
 .contact__container--block .logo-badge {
   height: 85%;
