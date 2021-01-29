@@ -1,78 +1,84 @@
 .packages {
-    margin: -4rem 0;
-    padding: 10rem 0 14rem 0;
-    grid-column: full-start / full-end;
-    text-align:center;
-    display:grid;
-    
+  margin: -4rem 0;
+  padding: 10rem 0 14rem 0;
+  grid-column: full-start / full-end;
+  text-align: center;
+  display: grid;
+
+  &__text-box {
+    margin-bottom: 6rem;
+    max-width: 100rem;
+    justify-self: center;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 15rem) [col-end]
+      )
+      [center-end] minmax(6rem, 1fr) [full-end];
+    grid-gap: 2rem;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-column: center-start / center-end;
+    column-gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__list-box {
+    margin: 8rem auto 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    li {
+      list-style: none;
+      margin-top: 1rem;
+      line-height: 1.4;
+    }
+
+    .heading-3 {
+      color: $color-primary;
+    }
+  }
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .packages {
+    margin-top: -6rem;
+    padding: 8rem 0 6rem 0;
+
     &__text-box {
-        margin-bottom: 6rem;
-        max-width: 100rem;
-        justify-self: center;  
+      margin-bottom: 3rem;
     }
 
-    &__container{
-        display:grid;
-        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-        grid-gap: 2rem;
-
-        a {
-            text-decoration:none;
-        }
-    }
-    
-    &__cards {
-        display:grid;
-        grid-column: center-start / center-end;
-        column-gap: 3rem;
-        grid-template-columns: repeat(3, 1fr);
+    &__container {
+      display: flex;
+      justify-content: center;
+      padding: 0 3rem;
     }
 
     &__list-box {
-        margin-top: 8rem;
-
-        .heading-3{
-            color: $color-primary;
-        }
+      margin-top: 4rem;
     }
-
-    
-}    
-
-
-@media only screen and (max-device-width: 1024px){
-    .packages{ 
-        margin-top: -6rem;
-        padding: 8rem 0 6rem 0;
-
-        &__text-box {
-            margin-bottom: 3rem;
-        }
-
-        &__container{
-            display:flex;
-            justify-content: center;
-            padding: 0 3rem;
-        }
-
-
-        &__list-box {
-            margin-top: 4rem;
-    
-        }
-    }
+  }
 }
 
-@media only screen and (max-device-width: 770px){
-    .packages{ 
-        
-        &__cards {
-            grid-column: full-start / full-end;
-            display:flex;
-            flex-direction: column;
-            justify-self: stretch;
-            row-gap: 3rem;
-        }
-   
+@media only screen and (max-device-width: 770px) {
+  .packages {
+    &__cards {
+      grid-column: full-start / full-end;
+      display: flex;
+      flex-direction: column;
+      justify-self: stretch;
+      row-gap: 3rem;
     }
+  }
 }

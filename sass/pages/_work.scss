@@ -1,0 +1,490 @@
+.portfolio {
+  margin-bottom: 2rem;
+}
+.our-work__vid-gallery {
+  margin-bottom: 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2rem;
+
+  .video {
+    height: 10vw;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.3);
+    }
+  }
+
+  // WEDDING VIDS
+  .v1-wed {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v1-wed.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v1-wed.jpg);
+    }
+  }
+
+  .v2-wed {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v2-wed.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v2-wed.jpg);
+    }
+  }
+
+  .v3-wed {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v3-wed.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v3-wed.jpg);
+    }
+  }
+
+  // REAL ESTATE VIDS
+  .v1-re {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v1-re.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v1-re.jpg);
+    }
+  }
+
+  .v2-re {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v2-re.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v2-re.jpg);
+    }
+  }
+
+  .v3-re {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v3-re.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v3-re.jpg);
+    }
+  }
+
+  .v4-re {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v4-re.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v4-re.jpg);
+    }
+  }
+
+  .v5-re {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v5-re.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v5-re.jpg);
+    }
+  }
+
+  .v6-re {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v6-re.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v6-re.jpg);
+    }
+  }
+
+  // BUSINESS PROMO VIDS
+  .v1-bp {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v1-bp.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v1-bp.jpg);
+    }
+  }
+
+  .v2-bp {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v2-bp.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v2-bp.jpg);
+    }
+  }
+
+  .v3-bp {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v3-bp.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v3-bp.jpg);
+    }
+  }
+
+  // PERSONAL PROMO VIDS
+  .v1-pp {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v1-pp.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v1-pp.jpg);
+    }
+  }
+
+  .v2-pp {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v2-pp.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v2-pp.jpg);
+    }
+  }
+
+  .v3-pp {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v3-pp.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v3-pp.jpg);
+    }
+  }
+
+  .v4-pp {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v4-pp.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v4-pp.jpg);
+    }
+  }
+
+  .v5-pp {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v5-pp.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v5-pp.jpg);
+    }
+  }
+
+  .v6-pp {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v6-pp.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v6-pp.jpg);
+    }
+  }
+  // PERSONAL PROMO VIDS
+  .v7-pp {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v7-pp.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v7-pp.jpg);
+    }
+  }
+
+  .v8-pp {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v8-pp.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v8-pp.jpg);
+    }
+  }
+
+  .v9-pp {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v9-pp.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v9-pp.jpg);
+    }
+  }
+
+  .v10-pp {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v10-pp.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v10-pp.jpg);
+    }
+  }
+
+  // MUSIC VIDS
+  .v1-mv {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v1-mv.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v1-mv.jpg);
+    }
+  }
+
+  .v2-mv {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v2-mv.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v2-mv.jpg);
+    }
+  }
+
+  // EVENT VIDS
+  .v1-ev {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v1-ev.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v1-ev.jpg);
+    }
+  }
+
+  .v2-ev {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v2-ev.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v2-ev.jpg);
+    }
+  }
+  // EDITED VIDS
+  .v1-ed {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/v1-ed.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/v1-ed.jpg);
+    }
+  }
+}
+
+@media only screen and (max-device-width: 1470px) {
+  .our-work__vid-gallery {
+    .video {
+      height: 14vw;
+    }
+  }
+}
+
+@media only screen and (max-device-width: 768px) {
+  .gallery-header {
+    margin-top: -2rem;
+  }
+  .our-work__vid-gallery {
+    grid-gap: 2rem;
+  }
+}
+
+@media only screen and (max-device-width: 420px) {
+  .portfolio {
+    margin-bottom: 0rem;
+  }
+  .our-work__vid-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.4rem;
+    .video {
+      height: 22vw;
+    }
+  }
+}

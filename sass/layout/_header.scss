@@ -46,6 +46,30 @@
   background-position: bottom;
 }
 
+.our-work-header {
+  background: linear-gradient(
+      to right bottom,
+      rgba($color-primary, 0.9),
+      rgba($color-secondary, 0.9)
+    ),
+    url(../img/our-work-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-header {
+  background: linear-gradient(
+      to right bottom,
+      rgba($color-primary, 0.9),
+      rgba($color-secondary, 0.9)
+    ),
+    url(../img/about-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .contact-header {
   background: linear-gradient(
       to right bottom,
@@ -127,7 +151,7 @@
     url(../img/personal-promo-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: bottom;
 }
 
 .real-estate-header {
@@ -139,7 +163,7 @@
     url(../img/real-estate-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
 }
 
 .wedding-header {
