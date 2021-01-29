@@ -1,8 +1,8 @@
 .vid-gallery-business-promo {
-  grid-template-areas: "vid1 vid2 vid3";
+  grid-template-areas: "vid1 vid2 vid3 vid4";
 
   .video {
-    height: 18vw;
+    height: 16vw;
   }
 
   .v1 {
@@ -55,18 +55,34 @@
         url(../img/vid_bp-3.jpg);
     }
   }
+  .v4 {
+    grid-area: vid4;
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/vid_bp-4.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/vid_bp-4.jpg);
+    }
+  }
 }
 
-@media only screen and (max-device-width: 710px) {
+@media only screen and (max-device-width: 770px) {
   .vid-gallery-business-promo {
     grid-template-areas:
-      "vid1 vid1"
-      "vid2 vid3"
-      "vid4 vid5";
+      "vid1 vid2"
+      "vid3 vid4";
+
     margin-bottom: 4rem;
 
     .video {
-      height: 25vh;
+      height: 22vh;
     }
   }
 }
@@ -89,7 +105,7 @@
     margin-bottom: 4rem;
 
     .video {
-      height: 16rem;
+      height: 18rem;
     }
   }
 }

@@ -1,7 +1,8 @@
 .vid-gallery-personal-promo {
   grid-template-areas:
-    "vid1 vid2 vid3"
-    "vid4 vid5 vid6";
+    " vid1 vid1 vid1 vid1 vid2 vid2 vid2 vid2 vid3 vid3 vid3 vid3"
+    " vid4 vid4 vid4 vid4 vid5 vid5 vid5 vid5 vid6 vid6 vid6 vid6"
+    " vid7 vid7 vid7 vid8 vid8 vid8 vid9 vid9 vid9 vid10 vid10 vid10";
 
   .video {
     height: 18vw;
@@ -13,14 +14,14 @@
         rgba($color-black, 0.5),
         rgba($color-black, 0.5)
       ),
-      url(../img/vid-pp-1.jpg);
+      url(../img/vid_pp-1.jpg);
 
     &:hover {
       background-image: linear-gradient(
           rgba($color-black, 0.1),
           rgba($color-black, 0.1)
         ),
-        url(../img/vid-pp-1.jpg);
+        url(../img/vid_pp-1.jpg);
     }
   }
 
@@ -30,14 +31,14 @@
         rgba($color-black, 0.5),
         rgba($color-black, 0.5)
       ),
-      url(../img/vid-pp-2.jpg);
+      url(../img/vid_pp-2.jpg);
 
     &:hover {
       background-image: linear-gradient(
           rgba($color-black, 0.1),
           rgba($color-black, 0.1)
         ),
-        url(../img/vid-pp-2.jpg);
+        url(../img/vid_pp-2.jpg);
     }
   }
 
@@ -47,14 +48,14 @@
         rgba($color-black, 0.5),
         rgba($color-black, 0.5)
       ),
-      url(../img/vid-pp-3.jpg);
+      url(../img/vid_pp-3.jpg);
 
     &:hover {
       background-image: linear-gradient(
           rgba($color-black, 0.1),
           rgba($color-black, 0.1)
         ),
-        url(../img/vid-pp-3.jpg);
+        url(../img/vid_pp-3.jpg);
     }
   }
 
@@ -64,14 +65,14 @@
         rgba($color-black, 0.5),
         rgba($color-black, 0.5)
       ),
-      url(../img/vid-pp-4.jpg);
+      url(../img/vid_pp-4.jpg);
 
     &:hover {
       background-image: linear-gradient(
           rgba($color-black, 0.1),
           rgba($color-black, 0.1)
         ),
-        url(../img/vid-pp-4.jpg);
+        url(../img/vid_pp-4.jpg);
     }
   }
 
@@ -81,14 +82,14 @@
         rgba($color-black, 0.5),
         rgba($color-black, 0.5)
       ),
-      url(../img/vid-pp-5.jpg);
+      url(../img/vid_pp-5.jpg);
 
     &:hover {
       background-image: linear-gradient(
           rgba($color-black, 0.1),
           rgba($color-black, 0.1)
         ),
-        url(../img/vid-pp-5.jpg);
+        url(../img/vid_pp-5.jpg);
     }
   }
 
@@ -98,28 +99,94 @@
         rgba($color-black, 0.5),
         rgba($color-black, 0.5)
       ),
-      url(../img/vid-pp-6.jpg);
+      url(../img/vid_pp-6.jpg);
 
     &:hover {
       background-image: linear-gradient(
           rgba($color-black, 0.1),
           rgba($color-black, 0.1)
         ),
-        url(../img/vid-pp-6.jpg);
+        url(../img/vid_pp-6.jpg);
+    }
+  }
+  .v7 {
+    grid-area: vid7;
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/vid_pp-7.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/vid_pp-7.jpg);
+    }
+  }
+  .v8 {
+    grid-area: vid8;
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/vid_pp-8.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/vid_pp-8.jpg);
+    }
+  }
+  .v9 {
+    grid-area: vid9;
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/vid_pp-9.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/vid_pp-9.jpg);
+    }
+  }
+  .v10 {
+    grid-area: vid10;
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/vid_pp-10.jpg);
+
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/vid_pp-10.jpg);
     }
   }
 }
 
-@media only screen and (max-device-width: 710px) {
+@media only screen and (max-device-width: 770px) {
   .vid-gallery-personal-promo {
     grid-template-areas:
       "vid1 vid2"
       "vid3 vid4"
-      "vid5 vid6";
+      "vid5 vid6"
+      "vid7 vid8"
+      "vid9 vid10";
     margin-bottom: 4rem;
 
     .video {
-      height: 25vh;
+      height: 24vh;
     }
   }
 }
@@ -138,7 +205,11 @@
       "vid3"
       "vid4"
       "vid5"
-      "vid6";
+      "vid6"
+      "vid7"
+      "vid8"
+      "vid9"
+      "vid10";
     grid-gap: 1rem;
     margin-bottom: 4rem;
 

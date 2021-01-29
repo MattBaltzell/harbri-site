@@ -1,6 +1,5 @@
 .vid-gallery-wedding {
-  // grid-template-areas:    "vid1 vid2 vid3";
-  grid-template-columns: 1fr, 1fr;
+  grid-template-areas: "vid1 vid2 vid3";
 
   .video {
     height: 22vw;
@@ -12,14 +11,14 @@
         rgba($color-black, 0.5),
         rgba($color-black, 0.5)
       ),
-      url(../img/vid-wedding-1.jpg);
+      url(../img/vid_wed-1.jpg);
 
     &:hover {
       background-image: linear-gradient(
           rgba($color-black, 0.1),
           rgba($color-black, 0.1)
         ),
-        url(../img/vid-wedding-1.jpg);
+        url(../img/vid_wed-1.jpg);
     }
   }
 
@@ -29,25 +28,33 @@
         rgba($color-black, 0.5),
         rgba($color-black, 0.5)
       ),
-      url(../img/vid-wedding-2.jpg);
+      url(../img/vid_wed-2.jpg);
 
     &:hover {
       background-image: linear-gradient(
           rgba($color-black, 0.1),
           rgba($color-black, 0.1)
         ),
-        url(../img/vid-wedding-2.jpg);
+        url(../img/vid_wed-2.jpg);
     }
   }
 
-  // .v3{
-  //     grid-area: vid3;
-  //     background-image: linear-gradient(rgba($color-black,.5),rgba($color-black,.5)),url(../img/vid-wedding-3.jpg);
+  .v3 {
+    grid-area: vid3;
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/vid_wed-3.jpg);
 
-  //     &:hover{
-  //         background-image: linear-gradient(rgba($color-black,.1),rgba($color-black,.1)),url(../img/vid-wedding-3.jpg);
-  //     }
-  // }
+    &:hover {
+      background-image: linear-gradient(
+          rgba($color-black, 0.1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/vid_wed-3.jpg);
+    }
+  }
 }
 
 @media only screen and (max-device-width: 710px) {
@@ -73,11 +80,12 @@
   }
 
   .vid-gallery-wedding {
-    // grid-template-areas:    "vid1"
-    //                         "vid2"
-    //                         "vid3"
-    //                         "vid4"
-    //                         "vid5";
+    grid-template-areas:
+      "vid1"
+      "vid2"
+      "vid3"
+      "vid4"
+      "vid5";
     //grid-template-columns: 1fr;
     grid-gap: 1rem;
     margin-bottom: 4rem;
