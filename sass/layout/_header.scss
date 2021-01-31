@@ -61,20 +61,20 @@
 .about-header {
   background: linear-gradient(
       to right bottom,
-      rgba($color-primary, 0.9),
-      rgba($color-secondary, 0.9)
+      rgba($color-secondary-lt, 0.9),
+      rgba($color-secondary-dk, 0.9)
     ),
     url(../img/about-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
 }
 
 .contact-header {
   background: linear-gradient(
       to right bottom,
-      rgba($color-primary, 0.9),
-      rgba($color-secondary, 0.9)
+      rgba($color-tertiary-lt, 0.9),
+      rgba($color-tertiary-dk, 0.9)
     ),
     url(../img/contact-hero.jpg);
   background-size: cover;

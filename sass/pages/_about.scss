@@ -1,0 +1,22 @@
+.about {
+  &__photo {
+    width: 40rem;
+    margin: 4rem auto;
+  }
+  &__text {
+    margin-bottom: 4rem;
+  }
+
+  @media only screen and (max-device-width: 1024px) {
+    &__photo {
+      width: 30rem;
+    }
+  }
+
+  @media only screen and (max-device-width: 420px) {
+    &__photo {
+      width: 26rem;
+      margin: 2rem auto;
+    }
+  }
+}

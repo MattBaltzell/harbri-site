@@ -859,14 +859,14 @@ MEDIA QUERIES
 }
 
 .about-header {
-  background: linear-gradient(to right bottom, rgba(99, 185, 154, 0.9), rgba(32, 113, 129, 0.9)), url(../img/about-hero.jpg);
+  background: linear-gradient(to right bottom, rgba(42, 149, 170, 0.9), rgba(22, 77, 88, 0.9)), url(../img/about-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
 }
 
 .contact-header {
-  background: linear-gradient(to right bottom, rgba(99, 185, 154, 0.9), rgba(32, 113, 129, 0.9)), url(../img/contact-hero.jpg);
+  background: linear-gradient(to right bottom, rgba(247, 195, 129, 0.9), rgba(243, 165, 65, 0.9)), url(../img/contact-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -1535,6 +1535,28 @@ MEDIA QUERIES
   }
   .testimonials__text-box {
     padding-top: 14rem;
+  }
+}
+
+.about__photo {
+  width: 40rem;
+  margin: 4rem auto;
+}
+
+.about__text {
+  margin-bottom: 4rem;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .about__photo {
+    width: 30rem;
+  }
+}
+
+@media only screen and (max-device-width: 420px) {
+  .about__photo {
+    width: 26rem;
+    margin: 2rem auto;
   }
 }
 
