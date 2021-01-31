@@ -1163,30 +1163,30 @@ MEDIA QUERIES
 .vid-gallery .v1 {
   grid-area: vid1;
   height: 25vw;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wedding_ryan-emily.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid_wed-1.jpg);
 }
 
 .vid-gallery .v1:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wedding_ryan-emily.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid_wed-1.jpg);
 }
 
 .vid-gallery .v2 {
   grid-area: vid2;
   height: 25vw;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/dentist_cedar-pearl.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid_bp-4.jpg);
 }
 
 .vid-gallery .v2:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/dentist_cedar-pearl.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid_bp-4.jpg);
 }
 
 .vid-gallery .v3 {
   grid-area: vid3;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/lagoon-bc.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid_re-1.jpg);
 }
 
 .vid-gallery .v3:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/lagoon-bc.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid_re-1.jpg);
 }
 
 .vid-gallery .v4 {
@@ -1200,11 +1200,11 @@ MEDIA QUERIES
 
 .vid-gallery .v5 {
   grid-area: vid5;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/realestate-maribeth.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vid_re-2.jpg);
 }
 
 .vid-gallery .v5:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/realestate-maribeth.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/vid_re-2.jpg);
 }
 
 .fas {
