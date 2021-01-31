@@ -442,7 +442,15 @@
     margin-bottom: 2rem;
 
     &__heading--re {
-      top: 11rem;
+      top: 12rem;
+    }
+
+    &__heading--adjust-down {
+      top: 17rem;
+    }
+
+    &__heading--adjust-up {
+      top: 12rem;
     }
 
     &__side {

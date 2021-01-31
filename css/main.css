@@ -195,6 +195,10 @@ body {
   margin-bottom: 1.4rem;
 }
 
+.lc {
+  text-transform: lowercase;
+}
+
 q {
   color: #dddddd;
 }
@@ -653,7 +657,13 @@ MEDIA QUERIES
     margin-bottom: 2rem;
   }
   .card__heading--re {
-    top: 11rem;
+    top: 12rem;
+  }
+  .card__heading--adjust-down {
+    top: 17rem;
+  }
+  .card__heading--adjust-up {
+    top: 12rem;
   }
   .card__side {
     height: auto;
